@@ -34,12 +34,10 @@ public class formEstoqueView extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        txtIdProduto = new javax.swing.JTextField();
         txtQuantidadeMaxima = new javax.swing.JTextField();
         txtDataEntrada = new javax.swing.JTextField();
         txtValorEstoque = new javax.swing.JTextField();
         txtQuantidadeEstoque = new javax.swing.JTextField();
-        txtIdFornecedor = new javax.swing.JTextField();
         txtQuantidadeMinima = new javax.swing.JTextField();
         txtIdEstoque = new javax.swing.JTextField();
         txtDescricao = new javax.swing.JTextField();
@@ -59,6 +57,9 @@ public class formEstoqueView extends javax.swing.JFrame {
         tabelaEstoque = new javax.swing.JTable();
         btnCarregarInformacoesEstoque = new javax.swing.JButton();
         btnExcluirInformacoesEstoque = new javax.swing.JButton();
+        txtIdProduto = new javax.swing.JTextField();
+        txtIdFornecedor = new javax.swing.JTextField();
+        btnVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -131,30 +132,22 @@ public class formEstoqueView extends javax.swing.JFrame {
             }
         });
 
+        btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(654, Short.MAX_VALUE)
-                .addComponent(btnCarregarInformacoesEstoque)
-                .addGap(47, 47, 47)
-                .addComponent(btnExcluirInformacoesEstoque)
-                .addGap(43, 43, 43))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 988, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(158, 158, 158)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnCadastrarEstoque)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnAlterarInformacoesEstoque)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnLimparCamposEstoque))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel1)
@@ -169,13 +162,13 @@ public class formEstoqueView extends javax.swing.JFrame {
                                                     .addComponent(txtQuantidadeEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addComponent(jLabel8)))
                                         .addGap(62, 62, 62)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtIdProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtQuantidadeMaxima, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtIdFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtQuantidadeMaxima, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
                                             .addComponent(jLabel3)
                                             .addComponent(jLabel6)
-                                            .addComponent(jLabel9))))
+                                            .addComponent(jLabel9)
+                                            .addComponent(txtIdProduto)
+                                            .addComponent(txtIdFornecedor))))
                                 .addGap(70, 70, 70)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10)
@@ -183,7 +176,24 @@ public class formEstoqueView extends javax.swing.JFrame {
                                     .addComponent(jLabel4)
                                     .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtQuantidadeMinima, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtValorEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(txtValorEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnCadastrarEstoque)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnAlterarInformacoesEstoque)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnLimparCamposEstoque))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnVoltar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnCarregarInformacoesEstoque)
+                                .addGap(47, 47, 47)
+                                .addComponent(btnExcluirInformacoesEstoque)
+                                .addGap(16, 16, 16))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 988, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -199,8 +209,8 @@ public class formEstoqueView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtIdEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtIdProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtValorEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtValorEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIdProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -218,9 +228,9 @@ public class formEstoqueView extends javax.swing.JFrame {
                     .addComponent(jLabel10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtIdFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtDataEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIdFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCadastrarEstoque)
@@ -231,7 +241,8 @@ public class formEstoqueView extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExcluirInformacoesEstoque)
-                    .addComponent(btnCarregarInformacoesEstoque))
+                    .addComponent(btnCarregarInformacoesEstoque)
+                    .addComponent(btnVoltar))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
@@ -279,6 +290,11 @@ public class formEstoqueView extends javax.swing.JFrame {
         LimparCampos();
     }//GEN-LAST:event_btnLimparCamposEstoqueActionPerformed
 
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        VoltarTela();
+         
+    }//GEN-LAST:event_btnVoltarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -320,6 +336,7 @@ public class formEstoqueView extends javax.swing.JFrame {
     private javax.swing.JButton btnCarregarInformacoesEstoque;
     private javax.swing.JButton btnExcluirInformacoesEstoque;
     private javax.swing.JButton btnLimparCamposEstoque;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -515,6 +532,15 @@ public class formEstoqueView extends javax.swing.JFrame {
         
         
     }
+     
+     
+     public void VoltarTela() {
+         
+          formPrincipalView formprincipalview = new formPrincipalView();
+                formprincipalview.setVisible(true);
+                
+                dispose();
+     }
     
 
 

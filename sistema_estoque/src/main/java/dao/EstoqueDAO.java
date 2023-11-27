@@ -41,17 +41,7 @@ public class EstoqueDAO {
             pstm.setInt(4, objestoquedto.getQuantidade_em_estoque());
             pstm.setInt(5, objestoquedto.getQuantidade_maxima());
             pstm.setInt(6, objestoquedto.getQuantidade_minima());
-            
-           // Obter a string da data e converter para LocalDate
-        String dataString = objestoquedto.getData_entrada();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate dataEntrada = LocalDate.parse(dataString, formatter);
-
-        // Convertendo LocalDate para java.sql.Date
-        Date sqlDate = Date.valueOf(dataEntrada);
-
-        pstm.setDate(7, sqlDate);
-            
+            pstm.setString(7, objestoquedto.getData_entrada());
             pstm.setInt(8, objestoquedto.getId_fornecedor());
             pstm.setString(9, objestoquedto.getDescricao());
             
@@ -158,5 +148,6 @@ public class EstoqueDAO {
             JOptionPane.showMessageDialog(null, "EstoqueDAO Excluir" + erro);
         } 
     }
+      
     
 }

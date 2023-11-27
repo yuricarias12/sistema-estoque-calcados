@@ -23,29 +23,11 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="654" max="32767" attributes="0"/>
-              <Component id="btnCarregarInformacoesEstoque" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-              <Component id="btnExcluirInformacoesEstoque" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="988" max="-2" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="btnCadastrarEstoque" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnAlterarInformacoesEstoque" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnLimparCamposEstoque" min="-2" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -63,13 +45,13 @@
                                           </Group>
                                       </Group>
                                       <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txtIdProduto" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
-                                          <Component id="txtQuantidadeMaxima" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
-                                          <Component id="txtIdFornecedor" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="txtQuantidadeMaxima" alignment="0" pref="179" max="32767" attributes="0"/>
                                           <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtIdProduto" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtIdFornecedor" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -83,6 +65,27 @@
                                   <Component id="txtValorEstoque" min="-2" pref="179" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="btnCadastrarEstoque" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnAlterarInformacoesEstoque" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnLimparCamposEstoque" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="btnVoltar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="btnCarregarInformacoesEstoque" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                              <Component id="btnExcluirInformacoesEstoque" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane1" min="-2" pref="988" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -104,8 +107,8 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtIdEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtIdProduto" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtValorEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtIdProduto" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -127,9 +130,9 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtIdFornecedor" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtDataEntrada" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtDescricao" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtIdFornecedor" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -143,6 +146,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnExcluirInformacoesEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnCarregarInformacoesEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnVoltar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="34" max="32767" attributes="0"/>
           </Group>
@@ -158,8 +162,6 @@
         <Property name="text" type="java.lang.String" value="Cadastro Estoque"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtIdProduto">
-    </Component>
     <Component class="javax.swing.JTextField" name="txtQuantidadeMaxima">
     </Component>
     <Component class="javax.swing.JTextField" name="txtDataEntrada">
@@ -167,8 +169,6 @@
     <Component class="javax.swing.JTextField" name="txtValorEstoque">
     </Component>
     <Component class="javax.swing.JTextField" name="txtQuantidadeEstoque">
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtIdFornecedor">
     </Component>
     <Component class="javax.swing.JTextField" name="txtQuantidadeMinima">
     </Component>
@@ -275,6 +275,18 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExcluirInformacoesEstoqueActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtIdProduto">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtIdFornecedor">
+    </Component>
+    <Component class="javax.swing.JButton" name="btnVoltar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Voltar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

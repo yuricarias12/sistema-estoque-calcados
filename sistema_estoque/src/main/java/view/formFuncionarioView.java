@@ -66,6 +66,7 @@ public class formFuncionarioView extends javax.swing.JFrame {
         btnLimparCampos = new javax.swing.JButton();
         btnAlterarInformacoes = new javax.swing.JButton();
         btnExcluir = new javax.swing.JButton();
+        btnVoltar = new javax.swing.JButton();
 
         textField1.setText("textField1");
 
@@ -172,6 +173,13 @@ public class formFuncionarioView extends javax.swing.JFrame {
             }
         });
 
+        btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -220,10 +228,12 @@ public class formFuncionarioView extends javax.swing.JFrame {
                                 .addComponent(btnLimparCampos))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(56, 56, 56)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnVoltar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnCarregarCampos)
-                                .addGap(18, 18, 18)
+                                .addGap(26, 26, 26)
                                 .addComponent(btnExcluir))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 733, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(117, Short.MAX_VALUE))
@@ -277,7 +287,8 @@ public class formFuncionarioView extends javax.swing.JFrame {
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCarregarCampos)
-                    .addComponent(btnExcluir))
+                    .addComponent(btnExcluir)
+                    .addComponent(btnVoltar))
                 .addGap(21, 21, 21))
         );
 
@@ -339,6 +350,10 @@ public class formFuncionarioView extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnExcluirActionPerformed
 
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        VoltarTela();
+    }//GEN-LAST:event_btnVoltarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -380,6 +395,7 @@ public class formFuncionarioView extends javax.swing.JFrame {
     private javax.swing.JButton btnCarregarCampos;
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnLimparCampos;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JFrame jFrame1;
@@ -586,5 +602,15 @@ public class formFuncionarioView extends javax.swing.JFrame {
         
         
     }
+    
+    
+    
+    public void VoltarTela() {
+         
+          formPrincipalView formprincipalview = new formPrincipalView();
+                formprincipalview.setVisible(true);
+                
+                dispose();
+     }
 
 }

@@ -64,6 +64,7 @@ public class formProdutoView extends javax.swing.JFrame {
         btnLimparCamposProduto = new javax.swing.JButton();
         btnCarregarInformacoesProduto = new javax.swing.JButton();
         btnExcluirInformacoesProduto = new javax.swing.JButton();
+        btnVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -145,6 +146,13 @@ public class formProdutoView extends javax.swing.JFrame {
             }
         });
 
+        btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -189,15 +197,15 @@ public class formProdutoView extends javax.swing.JFrame {
                             .addComponent(jLabel1))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(62, 62, 62)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnVoltar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCarregarInformacoesProduto)
                         .addGap(59, 59, 59)
                         .addComponent(btnExcluirInformacoesProduto))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -260,7 +268,8 @@ public class formProdutoView extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCarregarInformacoesProduto)
-                    .addComponent(btnExcluirInformacoesProduto))
+                    .addComponent(btnExcluirInformacoesProduto)
+                    .addComponent(btnVoltar))
                 .addContainerGap(83, Short.MAX_VALUE))
         );
 
@@ -312,6 +321,10 @@ public class formProdutoView extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnExcluirInformacoesProdutoActionPerformed
 
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        VoltarTela();
+    }//GEN-LAST:event_btnVoltarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -353,6 +366,7 @@ public class formProdutoView extends javax.swing.JFrame {
     private javax.swing.JButton btnCarregarInformacoesProduto;
     private javax.swing.JButton btnExcluirInformacoesProduto;
     private javax.swing.JButton btnLimparCamposProduto;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -574,6 +588,16 @@ private void ListarProdutos() {
         
         
     }
+     
+     
+     
+     public void VoltarTela() {
+         
+          formPrincipalView formprincipalview = new formPrincipalView();
+                formprincipalview.setVisible(true);
+                
+                dispose();
+     }
 
 
 
