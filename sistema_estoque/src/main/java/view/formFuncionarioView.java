@@ -7,6 +7,8 @@ package view;
 import dao.FuncionarioDAO;
 import dao.FuncionarioValidacaoLogin;
 import dto.FuncionarioDTO;
+import java.awt.Color;
+import java.awt.Font;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -23,6 +25,12 @@ public class formFuncionarioView extends javax.swing.JFrame {
     public formFuncionarioView() {
         initComponents();
         ListarFuncionario();
+        
+         tabelaFuncionario.getTableHeader().setFont(new Font ("Segoe UI", Font.BOLD, 12));
+        tabelaFuncionario.getTableHeader().setOpaque(false);
+        tabelaFuncionario.getTableHeader().setBackground(new Color(32, 136, 203));
+        tabelaFuncionario.getTableHeader().setForeground(new Color(0, 0, 0));
+        tabelaFuncionario.setRowHeight(25);
     }
 
     /**
@@ -136,9 +144,13 @@ public class formFuncionarioView extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null, null},
             },
             new String [] {
-                "ID", "Matricula", "Senha", "Nome", "CPF", "RG", "Cargo", "CEP", "Bairro", "Cidade"
+                "ID", "Nome", "Matricula", "Senha", "CPF", "RG", "Cargo", "CEP", "Bairro", "Cidade"
             }
         ));
+        tabelaFuncionario.setFocusable(false);
+        tabelaFuncionario.setRowHeight(25);
+        tabelaFuncionario.setSelectionBackground(new java.awt.Color(232, 57, 95));
+        tabelaFuncionario.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tabelaFuncionario);
 
         jLabel11.setText("ID");
@@ -443,9 +455,9 @@ public class formFuncionarioView extends javax.swing.JFrame {
                 model.addRow(new Object[] {
                     
                     lista.get(num).getId_funcionario(),
+                    lista.get(num).getNome(),
                     lista.get(num).getMatricula(),
                     lista.get(num).getSenha(),
-                    lista.get(num).getNome(),
                     lista.get(num).getCpf(),
                     lista.get(num).getRg(),
                     lista.get(num).getCargo(), 
@@ -469,9 +481,9 @@ public class formFuncionarioView extends javax.swing.JFrame {
         int setar = tabelaFuncionario.getSelectedRow();
         
         txtId.setText(tabelaFuncionario.getModel().getValueAt(setar, 0).toString());
-        txtMatricula.setText(tabelaFuncionario.getModel().getValueAt(setar, 1).toString());
-        txtSenha.setText(tabelaFuncionario.getModel().getValueAt(setar, 2).toString());
-        txtNome.setText(tabelaFuncionario.getModel().getValueAt(setar, 3).toString());
+        txtNome.setText(tabelaFuncionario.getModel().getValueAt(setar, 1).toString());
+        txtMatricula.setText(tabelaFuncionario.getModel().getValueAt(setar, 2).toString());
+        txtSenha.setText(tabelaFuncionario.getModel().getValueAt(setar, 3).toString());
         txtCpf.setText(tabelaFuncionario.getModel().getValueAt(setar, 4).toString());
         txtRg.setText(tabelaFuncionario.getModel().getValueAt(setar, 5).toString());
         txtCargo.setText(tabelaFuncionario.getModel().getValueAt(setar, 6).toString());
@@ -493,10 +505,10 @@ public class formFuncionarioView extends javax.swing.JFrame {
         String bairro;
         String cidade;
         
-        matricula = txtMatricula.getText();
-        senha = txtCpf.getText();
         nome = txtNome.getText();
-        cpf = txtSenha.getText();
+        matricula = txtMatricula.getText();
+        senha = txtSenha.getText();
+        cpf = txtCpf.getText();
         rg = Integer.parseInt( txtRg.getText());
         cargo = txtCargo.getText();
         cep = txtCep.getText();

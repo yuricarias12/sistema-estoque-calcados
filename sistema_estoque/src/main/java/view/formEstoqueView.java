@@ -6,8 +6,14 @@ package view;
 
 import dao.EstoqueDAO;
 import dto.EstoqueDTO;
+import dto.ProdutoDTO;
+import java.awt.Color;
+import java.awt.Font;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
+import java.util.Vector;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,7 +27,14 @@ public class formEstoqueView extends javax.swing.JFrame {
      */
     public formEstoqueView() {
         initComponents();
-        ListarEstoque();
+        listarEstoque();
+        restaurarDadosComboBoxProduto();
+        
+        tabelaEstoque.getTableHeader().setFont(new Font ("Segoe UI", Font.BOLD, 12));
+        tabelaEstoque.getTableHeader().setOpaque(false);
+        tabelaEstoque.getTableHeader().setBackground(new Color(32, 136, 203));
+        tabelaEstoque.getTableHeader().setForeground(new Color(0, 0, 0));
+        tabelaEstoque.setRowHeight(25);
     }
 
     /**
@@ -36,19 +49,16 @@ public class formEstoqueView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         txtQuantidadeMaxima = new javax.swing.JTextField();
         txtDataEntrada = new javax.swing.JTextField();
-        txtValorEstoque = new javax.swing.JTextField();
-        txtQuantidadeEstoque = new javax.swing.JTextField();
+        txtQuantidadeEmEstoque = new javax.swing.JTextField();
         txtQuantidadeMinima = new javax.swing.JTextField();
         txtIdEstoque = new javax.swing.JTextField();
         txtDescricao = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         btnCadastrarEstoque = new javax.swing.JButton();
         btnAlterarInformacoesEstoque = new javax.swing.JButton();
@@ -57,20 +67,23 @@ public class formEstoqueView extends javax.swing.JFrame {
         tabelaEstoque = new javax.swing.JTable();
         btnCarregarInformacoesEstoque = new javax.swing.JButton();
         btnExcluirInformacoesEstoque = new javax.swing.JButton();
-        txtIdProduto = new javax.swing.JTextField();
-        txtIdFornecedor = new javax.swing.JTextField();
         btnVoltar = new javax.swing.JButton();
+        cbxIdProduto = new javax.swing.JComboBox<>();
+        txtPrecoUnidade = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         jLabel1.setText("Cadastro Estoque");
 
+        txtDataEntrada.setEnabled(false);
+
+        txtIdEstoque.setEnabled(false);
+
         jLabel2.setText("ID_Estoque");
 
         jLabel3.setText("ID_Produto");
-
-        jLabel4.setText("Valor do Estoque");
 
         jLabel5.setText("Quantidade em Estoque");
 
@@ -79,8 +92,6 @@ public class formEstoqueView extends javax.swing.JFrame {
         jLabel7.setText("Quantidade Minima");
 
         jLabel8.setText("Data de Entrada");
-
-        jLabel9.setText("ID_Fornecedor");
 
         jLabel10.setText("Descrição");
 
@@ -113,9 +124,12 @@ public class formEstoqueView extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID_Estoque", "ID_Produto", "Valor do Estoque", "Quantidade em Estoque", "Quantidade Máxima", "Quantidade Minima", "Data de Entrada", "ID_Fornecedor", "Descrição"
+                "ID_Estoque", "Valor Total do Estoque", "Quantidade em Estoque", "Quantidade Máxima", "Quantidade Minima", "Data de Entrada", "Descrição", "ID_Produto", "Preço_Unidade"
             }
         ));
+        tabelaEstoque.setFocusable(false);
+        tabelaEstoque.setSelectionBackground(new java.awt.Color(232, 57, 95));
+        tabelaEstoque.setShowHorizontalLines(true);
         jScrollPane1.setViewportView(tabelaEstoque);
 
         btnCarregarInformacoesEstoque.setText("Carregar Informações");
@@ -139,6 +153,10 @@ public class formEstoqueView extends javax.swing.JFrame {
             }
         });
 
+        cbxIdProduto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione" }));
+
+        jLabel9.setText("Preço da Unidade");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -159,24 +177,22 @@ public class formEstoqueView extends javax.swing.JFrame {
                                                 .addComponent(jLabel5)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                     .addComponent(txtDataEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(txtQuantidadeEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(txtQuantidadeEmEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addComponent(jLabel8)))
                                         .addGap(62, 62, 62)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(txtQuantidadeMaxima, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
                                             .addComponent(jLabel3)
                                             .addComponent(jLabel6)
-                                            .addComponent(jLabel9)
-                                            .addComponent(txtIdProduto)
-                                            .addComponent(txtIdFornecedor))))
+                                            .addComponent(cbxIdProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPrecoUnidade)
+                                            .addComponent(jLabel9))))
                                 .addGap(70, 70, 70)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10)
                                     .addComponent(jLabel7)
-                                    .addComponent(jLabel4)
                                     .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtQuantidadeMinima, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtValorEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtQuantidadeMinima, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnCadastrarEstoque)
                                 .addGap(18, 18, 18)
@@ -204,13 +220,11 @@ public class formEstoqueView extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtIdEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtValorEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtIdProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbxIdProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -219,18 +233,18 @@ public class formEstoqueView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtQuantidadeMaxima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtQuantidadeEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtQuantidadeEmEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtQuantidadeMinima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel10))
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtDataEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtIdFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPrecoUnidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCadastrarEstoque)
@@ -250,48 +264,48 @@ public class formEstoqueView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAlterarInformacoesEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarInformacoesEstoqueActionPerformed
-        if (txtIdEstoque.getText().isEmpty() || txtIdProduto.getText().isEmpty() || txtValorEstoque.getText().isEmpty() || txtQuantidadeEstoque.getText().isEmpty() || txtQuantidadeMaxima.getText().isEmpty() || txtQuantidadeMinima.getText().isEmpty() || txtDataEntrada.getText().isEmpty() || txtIdFornecedor.getText().isEmpty() || txtDescricao.getText().isEmpty()) {
+        if (txtQuantidadeEmEstoque.getText().isEmpty() || txtQuantidadeMaxima.getText().isEmpty() || txtQuantidadeMinima.getText().isEmpty() || txtDescricao.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Prencha as Informações dos campos");
         } else {
              
-            AlterarEstoque();
-            ListarEstoque();
-            LimparCampos();
+            alterarEstoque();
+            listarEstoque();
+            limparCampos();
         }
     }//GEN-LAST:event_btnAlterarInformacoesEstoqueActionPerformed
 
     private void btnCarregarInformacoesEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCarregarInformacoesEstoqueActionPerformed
-        CarregarCamposEstoque();
+        carregarCamposEstoque();
     }//GEN-LAST:event_btnCarregarInformacoesEstoqueActionPerformed
 
     private void btnCadastrarEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarEstoqueActionPerformed
-        if (txtIdEstoque.getText().isEmpty() || txtIdProduto.getText().isEmpty() || txtValorEstoque.getText().isEmpty() || txtQuantidadeEstoque.getText().isEmpty() || txtQuantidadeMaxima.getText().isEmpty() || txtQuantidadeMinima.getText().isEmpty() || txtDataEntrada.getText().isEmpty() || txtIdFornecedor.getText().isEmpty() || txtDescricao.getText().isEmpty()) {
+        if ( txtQuantidadeEmEstoque.getText().isEmpty() || txtQuantidadeMaxima.getText().isEmpty() || txtQuantidadeMinima.getText().isEmpty() || txtDescricao.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Prencha as Informações dos campos");
         } else {
              
-            CadastrarEstoque();
-            ListarEstoque();
-            LimparCampos();
+            cadastrarEstoque();
+            listarEstoque();
+            limparCampos();
         }
     }//GEN-LAST:event_btnCadastrarEstoqueActionPerformed
 
     private void btnExcluirInformacoesEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirInformacoesEstoqueActionPerformed
-       if (txtIdEstoque.getText().isEmpty() || txtIdProduto.getText().isEmpty() || txtValorEstoque.getText().isEmpty() || txtQuantidadeEstoque.getText().isEmpty() || txtQuantidadeMaxima.getText().isEmpty() || txtQuantidadeMinima.getText().isEmpty() || txtDataEntrada.getText().isEmpty() || txtIdFornecedor.getText().isEmpty() || txtDescricao.getText().isEmpty()) {
+       if ( txtQuantidadeEmEstoque.getText().isEmpty() || txtQuantidadeMaxima.getText().isEmpty() || txtQuantidadeMinima.getText().isEmpty() || txtDescricao.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Prencha as Informações dos campos");
         } else {
              
-            ExcluirEstoque();
-            ListarEstoque();
-            LimparCampos();
+            excluirEstoque();
+            listarEstoque();
+            limparCampos();
         }
     }//GEN-LAST:event_btnExcluirInformacoesEstoqueActionPerformed
 
     private void btnLimparCamposEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparCamposEstoqueActionPerformed
-        LimparCampos();
+        limparCampos();
     }//GEN-LAST:event_btnLimparCamposEstoqueActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
-        VoltarTela();
+        voltarTela();
          
     }//GEN-LAST:event_btnVoltarActionPerformed
 
@@ -337,11 +351,11 @@ public class formEstoqueView extends javax.swing.JFrame {
     private javax.swing.JButton btnExcluirInformacoesEstoque;
     private javax.swing.JButton btnLimparCamposEstoque;
     private javax.swing.JButton btnVoltar;
+    private javax.swing.JComboBox<String> cbxIdProduto;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -352,17 +366,15 @@ public class formEstoqueView extends javax.swing.JFrame {
     private javax.swing.JTextField txtDataEntrada;
     private javax.swing.JTextField txtDescricao;
     private javax.swing.JTextField txtIdEstoque;
-    private javax.swing.JTextField txtIdFornecedor;
-    private javax.swing.JTextField txtIdProduto;
-    private javax.swing.JTextField txtQuantidadeEstoque;
+    private javax.swing.JTextField txtPrecoUnidade;
+    private javax.swing.JTextField txtQuantidadeEmEstoque;
     private javax.swing.JTextField txtQuantidadeMaxima;
     private javax.swing.JTextField txtQuantidadeMinima;
-    private javax.swing.JTextField txtValorEstoque;
     // End of variables declaration//GEN-END:variables
 
 
     
-    private void ListarEstoque() {
+    private void listarEstoque() {
         
         try {
             
@@ -372,21 +384,23 @@ public class formEstoqueView extends javax.swing.JFrame {
             
             model.setNumRows(0);
             
-            ArrayList<EstoqueDTO> lista = objestoquedao.PesquisarEstoque();
+            ArrayList<EstoqueDTO> lista = objestoquedao.pesquisarEstoque();
             
             for(int num = 0 ; num < lista.size(); num++) {
                 
                 model.addRow(new Object[] {
                     
                     lista.get(num).getId_estoque(),
-                    lista.get(num).getId_produto(),
-                    lista.get(num).getValor_estoque(),
+                    lista.get(num).valorTotalEmEstoque(),  // Adicione esta linha
                     lista.get(num).getQuantidade_em_estoque(),
                     lista.get(num).getQuantidade_maxima(),
                     lista.get(num).getQuantidade_minima(),
                     lista.get(num).getData_entrada(), 
-                    lista.get(num).getId_fornecedor(), 
-                    lista.get(num).getDescricao(), 
+                    lista.get(num).getDescricao(),
+                    lista.get(num).getId_produto(),
+                    lista.get(num).getPreco_unidade(),
+                    
+                    
             });
                    
             }
@@ -398,82 +412,72 @@ public class formEstoqueView extends javax.swing.JFrame {
     }
     
     
-    private void CarregarCamposEstoque() {
+    private void carregarCamposEstoque() {
         
         int setar = tabelaEstoque.getSelectedRow();
         
         txtIdEstoque.setText(tabelaEstoque.getModel().getValueAt(setar, 0).toString());
-        txtIdProduto.setText(tabelaEstoque.getModel().getValueAt(setar, 1).toString());
-        txtValorEstoque.setText(tabelaEstoque.getModel().getValueAt(setar, 2).toString());
-        txtQuantidadeEstoque.setText(tabelaEstoque.getModel().getValueAt(setar, 3).toString());
-        txtQuantidadeMaxima.setText(tabelaEstoque.getModel().getValueAt(setar, 4).toString());
-        txtQuantidadeMinima.setText(tabelaEstoque.getModel().getValueAt(setar, 5).toString());
-        txtDataEntrada.setText(tabelaEstoque.getModel().getValueAt(setar, 6).toString());
-        txtIdFornecedor.setText(tabelaEstoque.getModel().getValueAt(setar, 7).toString());
-        txtDescricao.setText(tabelaEstoque.getModel().getValueAt(setar, 8).toString());
+        txtQuantidadeEmEstoque.setText(tabelaEstoque.getModel().getValueAt(setar, 2).toString());
+        txtQuantidadeMaxima.setText(tabelaEstoque.getModel().getValueAt(setar, 3).toString());
+        txtQuantidadeMinima.setText(tabelaEstoque.getModel().getValueAt(setar, 4).toString());
+        txtDataEntrada.setText(tabelaEstoque.getModel().getValueAt(setar, 5).toString());
+        txtDescricao.setText(tabelaEstoque.getModel().getValueAt(setar, 6).toString());
+        txtPrecoUnidade.setText(tabelaEstoque.getModel().getValueAt(setar, 8).toString());
         
     }
     
     
-    private void CadastrarEstoque() {
+    private void cadastrarEstoque() {
         
-        int id_estoque;
-        int id_produto;
-        Double valor_estoque;
-        int quantidade_em_estoque;
-        int quantidade_maxima;
-        int quantidade_minima;
-        String data_entrada;
-        int id_fornecedor;
-        String descricao;
-        
-        id_estoque = Integer.parseInt(txtIdEstoque.getText());
-        id_produto = Integer.parseInt(txtIdProduto.getText());
-        valor_estoque = Double.parseDouble(txtValorEstoque.getText());
-        quantidade_em_estoque = Integer.parseInt(txtQuantidadeEstoque.getText());
-        quantidade_maxima = Integer.parseInt(txtQuantidadeMaxima.getText());
-        quantidade_minima = Integer.parseInt( txtQuantidadeMinima.getText());
-        data_entrada = txtDataEntrada.getText();
-        id_fornecedor = Integer.parseInt(txtIdFornecedor.getText());
-        descricao = txtDescricao.getText();
-       
-     
-    
     EstoqueDTO objestoquedto = new EstoqueDTO();
+        
+    int cod_produto;
+    int quantidade_em_estoque;
+    int quantidade_maxima;
+    int quantidade_minima;
+    String data_entrada;
+    String descricao;
     
-    objestoquedto.setId_estoque(id_estoque);
-    objestoquedto.setId_produto(id_produto);
-    objestoquedto.setValor_estoque(valor_estoque);
+    cod_produto = id_produto.elementAt(cbxIdProduto.getSelectedIndex() - 1);
+    quantidade_em_estoque = Integer.parseInt(txtQuantidadeEmEstoque.getText());
+    quantidade_maxima = Integer.parseInt(txtQuantidadeMaxima.getText());
+    quantidade_minima = Integer.parseInt(txtQuantidadeMinima.getText());
+    data_entrada = txtDataEntrada.getText();
+    descricao = txtDescricao.getText();
+       
+    
+    objestoquedto.setId_produto(cod_produto);
     objestoquedto.setQuantidade_em_estoque(quantidade_em_estoque);
     objestoquedto.setQuantidade_maxima(quantidade_maxima);
     objestoquedto.setQuantidade_minima(quantidade_minima);
     objestoquedto.setData_entrada(data_entrada);
-    objestoquedto.setId_fornecedor(id_fornecedor);
     objestoquedto.setDescricao(descricao);
+    objestoquedto.setPreco_unidade(Double.parseDouble(txtPrecoUnidade.getText())); // Adicione esta linha para definir o preço da unidade
     
     EstoqueDAO objestoquedao = new EstoqueDAO();
     
+    // Certifique-se de usar o mesmo nome da variável
     objestoquedao.cadastrarEstoque(objestoquedto);
-    }
+}
     
     
-     private void LimparCampos() {
+     private void limparCampos() {
         
         txtIdEstoque.setText("");
-        txtIdProduto.setText("");
-        txtValorEstoque.setText("");
-        txtQuantidadeEstoque.setText("");
+       
+        
+        txtQuantidadeEmEstoque.setText("");
         txtQuantidadeMaxima.setText("");
         txtQuantidadeMinima.setText("");
         txtDataEntrada.setText("");
-        txtIdFornecedor.setText("");
         txtDescricao.setText("");
+        txtPrecoUnidade.setText("");
         txtIdEstoque.requestFocus();
 
     }
      
      
-    private void AlterarEstoque() {
+    private void alterarEstoque() {
         
     int id_estoque;
     int id_produto;
@@ -484,39 +488,39 @@ public class formEstoqueView extends javax.swing.JFrame {
     String data_entrada;
     int id_fornecedor;
     String descricao;
+   
  
     
-    id_estoque = Integer.parseInt( txtIdEstoque.getText());
-    id_produto = Integer.parseInt(txtIdProduto.getText());
-    valor_estoque = Double.parseDouble(txtValorEstoque.getText());
-    quantidade_em_estoque = Integer.parseInt(txtQuantidadeEstoque.getText());
+    id_estoque = Integer.parseInt(txtIdEstoque.getText());
+    quantidade_em_estoque = Integer.parseInt(txtQuantidadeEmEstoque.getText());
     quantidade_maxima= Integer.parseInt(txtQuantidadeMaxima.getText());
     quantidade_minima = Integer.parseInt( txtQuantidadeMinima.getText());
     data_entrada = txtDataEntrada.getText();
-    id_fornecedor = Integer.parseInt(txtIdFornecedor.getText());
     descricao = txtDescricao.getText();
+
+    
   
     
     EstoqueDTO objestoquedto = new EstoqueDTO();
     
-    objestoquedto.setId_estoque( id_estoque);
-    objestoquedto.setId_produto(id_produto);
-    objestoquedto.setValor_estoque(valor_estoque);
+    objestoquedto.setId_estoque(id_estoque);
+    
+    
     objestoquedto.setQuantidade_em_estoque( quantidade_em_estoque);
     objestoquedto.setQuantidade_maxima(quantidade_maxima);
     objestoquedto.setQuantidade_minima(quantidade_minima);
     objestoquedto.setData_entrada(data_entrada);
-    objestoquedto.setId_fornecedor( id_fornecedor);
     objestoquedto.setDescricao(descricao);
+    
     
     
     EstoqueDAO objestoquedao = new EstoqueDAO();
     
-    objestoquedao.AlterarEstoque(objestoquedto);
+    objestoquedao.alterarEstoque(objestoquedto);
            
     }
     
-     private void ExcluirEstoque() {
+     private void excluirEstoque() {
         
         int id_estoque;
         
@@ -534,12 +538,35 @@ public class formEstoqueView extends javax.swing.JFrame {
     }
      
      
-     public void VoltarTela() {
+     public void voltarTela() {
          
           formPrincipalView formprincipalview = new formPrincipalView();
                 formprincipalview.setVisible(true);
                 
                 dispose();
+     }
+     
+     
+     Vector<Integer> id_produto = new Vector<Integer>();
+     
+     
+     public void restaurarDadosComboBoxProduto() {
+         
+         try {
+             
+             EstoqueDAO objestoquedao = new EstoqueDAO();
+             ResultSet rs = objestoquedao.listarIdProduto();
+             
+             while (rs.next()) {
+                 
+                 id_produto.addElement(rs.getInt(1));
+                 cbxIdProduto.addItem(rs.getString(2));
+             }
+             
+         } catch (SQLException erro) {
+             
+             JOptionPane.showMessageDialog(null, "Carregar ID_Produto View" + erro.getLocalizedMessage());
+         }
      }
     
 

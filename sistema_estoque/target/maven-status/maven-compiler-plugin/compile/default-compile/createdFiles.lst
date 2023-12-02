@@ -2,6 +2,7 @@ view\formProdutoView$3.class
 view\formFornecedorView$7.class
 view\formEstoqueView$2.class
 view\formProdutoView.class
+interfaces\FornecedorInterface.class
 view\formFuncionarioView$5.class
 view\formEstoqueView$5.class
 view\formLogin$2.class
@@ -28,12 +29,14 @@ view\formFornecedorView$8.class
 view\formProdutoView$2.class
 view\formPrincipalView$3.class
 view\formFornecedorView$5.class
+interfaces\EstoqueInterface.class
 view\formEstoqueView$4.class
 view\formProdutoView$5.class
 view\formProdutoView$8.class
 view\formFornecedorView$2.class
 view\formFuncionarioView$8.class
 view\formPrincipalView$6.class
+dto\CategoriaDTO.class
 view\formEstoqueView$7.class
 view\formFuncionarioView$3.class
 dao\FornecedorDAO.class
@@ -42,6 +45,7 @@ view\formProdutoView$1.class
 dao\ConexaoDAO.class
 view\formFuncionarioView$7.class
 view\listaTabelaFuncionario$1.class
+interfaces\ProdutoInterface.class
 view\formFornecedorView$6.class
 view\formProdutoView$4.class
 view\formEstoqueView$3.class
@@ -53,6 +57,7 @@ view\formPrincipalView$2.class
 view\formFornecedorView.class
 view\formFornecedorView$4.class
 view\formFuncionarioView$6.class
+interfaces\FuncionarioInterface.class
 dto\FuncionarioDTO.class
 view\formPrincipalView.class
 view\formPrincipalView$5.class

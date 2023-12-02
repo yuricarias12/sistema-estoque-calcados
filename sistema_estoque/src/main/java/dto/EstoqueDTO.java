@@ -10,13 +10,13 @@ public class EstoqueDTO {
     private int quantidade_maxima;
     private int quantidade_minima;
     private String data_entrada;
-    private int id_fornecedor;
+    private Double preco_unidade;
     private String descricao;
 
     public EstoqueDTO() {
     }
 
-    public EstoqueDTO(int id_estoque, int id_produto, Double valor_estoque, int quantidade_em_estoque, int quantidade_maxima, int quantidade_minima, String data_entrada, int id_fornecedor, String descricao) {
+    public EstoqueDTO(int id_estoque, int id_produto, Double valor_estoque, int quantidade_em_estoque, int quantidade_maxima, int quantidade_minima, String data_entrada, Double preco_unidade, int id_fornecedor, String descricao) {
         this.id_estoque = id_estoque;
         this.id_produto = id_produto;
         this.valor_estoque = valor_estoque;
@@ -24,7 +24,7 @@ public class EstoqueDTO {
         this.quantidade_maxima = quantidade_maxima;
         this.quantidade_minima = quantidade_minima;
         this.data_entrada = data_entrada;
-        this.id_fornecedor = id_fornecedor;
+        this.preco_unidade = preco_unidade;
         this.descricao = descricao;
     }
 
@@ -84,12 +84,12 @@ public class EstoqueDTO {
         this.data_entrada = data_entrada;
     }
 
-    public int getId_fornecedor() {
-        return id_fornecedor;
+    public Double getPreco_unidade() {
+        return preco_unidade;
     }
 
-    public void setId_fornecedor(int id_fornecedor) {
-        this.id_fornecedor = id_fornecedor;
+    public void setPreco_unidade(Double preco_unidade) {
+        this.preco_unidade = preco_unidade;
     }
 
     public String getDescricao() {
@@ -101,6 +101,19 @@ public class EstoqueDTO {
     }
     
     
+    public void addProdutos(int quantidade_em_estoque) {
+       this.quantidade_em_estoque += quantidade_em_estoque;
+    }
     
+    public void removerProdutos(int quantidade_em_estoque) {
+        this.quantidade_em_estoque -= quantidade_em_estoque;
+    }
     
+     public Double valorTotalEmEstoque() {
+        if (preco_unidade != null && quantidade_em_estoque >= 0) {
+            return preco_unidade * quantidade_em_estoque;
+        } else {
+            return 0.0; // ou outra ação apropriada, como lançar uma exceção
+        }
+    }
 }

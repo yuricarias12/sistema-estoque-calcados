@@ -6,6 +6,7 @@ package view;
 
 import dao.FuncionarioValidacaoLogin;
 import dto.FuncionarioDTO;
+import java.awt.Toolkit;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -21,6 +22,7 @@ public class formLogin extends javax.swing.JFrame {
      */
     public formLogin() {
         initComponents();
+        
     }
 
     /**

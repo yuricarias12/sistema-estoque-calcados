@@ -10,15 +10,16 @@ public class ProdutoDTO {
     private String cor;
     private Double preco;
     private int quantidade;
-    private String categoria;
+    private int cod_categoria;
     private int id_estoque;
     private String codigo_sku;
     private String modelo;
+    
 
     public ProdutoDTO() {
     }
 
-    public ProdutoDTO(int id_produto, String nome, int tamanho, String marca, String cor, Double preco, int quantidade, String categoria, int id_estoque, String codigo_sku, String modelo) {
+    public ProdutoDTO(int id_produto, String nome, int tamanho, String marca, String cor, Double preco, int quantidade, int cod_categoria, int id_estoque, String codigo_sku, String modelo) {
         this.id_produto = id_produto;
         this.nome = nome;
         this.tamanho = tamanho;
@@ -26,7 +27,7 @@ public class ProdutoDTO {
         this.cor = cor;
         this.preco = preco;
         this.quantidade = quantidade;
-        this.categoria = categoria;
+        this.cod_categoria = cod_categoria;
         this.id_estoque = id_estoque;
         this.codigo_sku = codigo_sku;
         this.modelo = modelo;
@@ -88,14 +89,15 @@ public class ProdutoDTO {
         this.quantidade = quantidade;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public int getCod_categoria() {
+        return cod_categoria;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setCod_categoria(int cod_categoria) {
+        this.cod_categoria = cod_categoria;
     }
 
+    
     public int getId_estoque() {
         return id_estoque;
     }
@@ -118,6 +120,14 @@ public class ProdutoDTO {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+    
+    public double valorTotalEmEstoque() {
+       if (preco != null) {
+        return preco * quantidade;
+    } else {
+        return 0.0; // ou outro valor padrão, dependendo da lógica do seu sistema
+    }
     }
     
     

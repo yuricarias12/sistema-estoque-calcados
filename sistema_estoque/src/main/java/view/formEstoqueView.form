@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -39,7 +39,7 @@
                                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                               <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                                   <Component id="txtDataEntrada" alignment="1" min="-2" pref="179" max="-2" attributes="0"/>
-                                                  <Component id="txtQuantidadeEstoque" alignment="1" min="-2" pref="179" max="-2" attributes="0"/>
+                                                  <Component id="txtQuantidadeEmEstoque" alignment="1" min="-2" pref="179" max="-2" attributes="0"/>
                                               </Group>
                                               <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
@@ -49,9 +49,9 @@
                                           <Component id="txtQuantidadeMaxima" alignment="0" pref="179" max="32767" attributes="0"/>
                                           <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtIdProduto" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtIdFornecedor" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="cbxIdProduto" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
+                                          <Component id="txtPrecoUnidade" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -59,10 +59,8 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtDescricao" min="-2" pref="179" max="-2" attributes="0"/>
                                   <Component id="txtQuantidadeMinima" min="-2" pref="179" max="-2" attributes="0"/>
-                                  <Component id="txtValorEstoque" min="-2" pref="179" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -102,13 +100,11 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtIdEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtValorEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtIdProduto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbxIdProduto" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -119,20 +115,20 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtQuantidadeMaxima" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtQuantidadeEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtQuantidadeEmEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtQuantidadeMinima" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtDataEntrada" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtDescricao" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtIdFornecedor" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPrecoUnidade" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -165,14 +161,18 @@
     <Component class="javax.swing.JTextField" name="txtQuantidadeMaxima">
     </Component>
     <Component class="javax.swing.JTextField" name="txtDataEntrada">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtValorEstoque">
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtQuantidadeEstoque">
+    <Component class="javax.swing.JTextField" name="txtQuantidadeEmEstoque">
     </Component>
     <Component class="javax.swing.JTextField" name="txtQuantidadeMinima">
     </Component>
     <Component class="javax.swing.JTextField" name="txtIdEstoque">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtDescricao">
     </Component>
@@ -184,11 +184,6 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="text" type="java.lang.String" value="ID_Produto"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Valor do Estoque"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
@@ -209,11 +204,6 @@
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
         <Property name="text" type="java.lang.String" value="Data de Entrada"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel9">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="ID_Fornecedor"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel10">
@@ -255,8 +245,13 @@
         <Component class="javax.swing.JTable" name="tabelaEstoque">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;ID_Estoque&quot;, &quot;ID_Produto&quot;, &quot;Valor do Estoque&quot;, &quot;Quantidade em Estoque&quot;, &quot;Quantidade M&#xe1;xima&quot;, &quot;Quantidade Minima&quot;, &quot;Data de Entrada&quot;, &quot;ID_Fornecedor&quot;, &quot;Descri&#xe7;&#xe3;o&quot;&#xa;    }&#xa;)" type="code"/>
+              <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;ID_Estoque&quot;, &quot;Valor Total do Estoque&quot;, &quot;Quantidade em Estoque&quot;, &quot;Quantidade M&#xe1;xima&quot;, &quot;Quantidade Minima&quot;, &quot;Data de Entrada&quot;, &quot;Descri&#xe7;&#xe3;o&quot;, &quot;ID_Produto&quot;, &quot;Pre&#xe7;o_Unidade&quot;&#xa;    }&#xa;)" type="code"/>
             </Property>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="selectionBackground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="5f" green="39" red="e8" type="rgb"/>
+            </Property>
+            <Property name="showHorizontalLines" type="boolean" value="true"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -277,10 +272,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExcluirInformacoesEstoqueActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtIdProduto">
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtIdFornecedor">
-    </Component>
     <Component class="javax.swing.JButton" name="btnVoltar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Voltar"/>
@@ -288,6 +279,25 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbxIdProduto">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="1">
+            <StringItem index="0" value="Selecione"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtPrecoUnidade">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pre&#xe7;o da Unidade"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

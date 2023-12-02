@@ -15,6 +15,7 @@ public class formPrincipalView extends javax.swing.JFrame {
      */
     public formPrincipalView() {
         initComponents();
+        
     }
 
     /**
@@ -95,11 +96,12 @@ public class formPrincipalView extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(354, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnTelaCadastroProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnTelaCadastroFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnTelaCadastroFornecedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnTelaCadastroEstoque, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnTelaCadastroEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnTelaCadastroProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnTelaCadastroFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnTelaCadastroFornecedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(384, 384, 384))
         );
         layout.setVerticalGroup(
@@ -110,14 +112,14 @@ public class formPrincipalView extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addComponent(jLabel2)
                 .addGap(47, 47, 47)
-                .addComponent(btnTelaCadastroEstoque)
-                .addGap(18, 18, 18)
-                .addComponent(btnTelaCadastroFornecedor)
-                .addGap(22, 22, 22)
                 .addComponent(btnTelaCadastroFuncionario)
                 .addGap(18, 18, 18)
                 .addComponent(btnTelaCadastroProdutos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnTelaCadastroEstoque)
+                .addGap(18, 18, 18)
+                .addComponent(btnTelaCadastroFornecedor)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                 .addComponent(btnSair)
                 .addGap(141, 141, 141))
         );
@@ -195,6 +197,7 @@ public class formPrincipalView extends javax.swing.JFrame {
         
                 formEstoqueView formestoqueview = new formEstoqueView();
                 formestoqueview.setVisible(true);
+                dispose();
     }
     
     
@@ -202,6 +205,7 @@ public class formPrincipalView extends javax.swing.JFrame {
         
                 formFornecedorView formfornecedorview = new formFornecedorView();
                 formfornecedorview.setVisible(true);
+                dispose();
     }
     
     
@@ -209,6 +213,7 @@ public class formPrincipalView extends javax.swing.JFrame {
         
                 formFuncionarioView formfuncionarioview = new formFuncionarioView();
                 formfuncionarioview.setVisible(true);
+                dispose();
     }
     
     
@@ -216,6 +221,7 @@ public class formPrincipalView extends javax.swing.JFrame {
         
                 formProdutoView formprodutoview = new formProdutoView();
                 formprodutoview.setVisible(true);
+                dispose();
     }
     
     

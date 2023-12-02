@@ -6,6 +6,7 @@ package dao;
 
 
 import dto.FornecedorDTO;
+import interfaces.FornecedorInterface;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,11 +14,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Estudo
- */
-public class FornecedorDAO {
+
+public class FornecedorDAO implements FornecedorInterface {
     
     Connection conn;
     PreparedStatement pstm;
@@ -25,6 +23,7 @@ public class FornecedorDAO {
     
     ArrayList<FornecedorDTO> lista = new ArrayList<>();
     
+     @Override
     public void cadastrarFornecedor(FornecedorDTO objfornecedordto) {
         
         String sql = "INSERT INTO fornecedor (nome_empresa, id_produto, razao_social, cnpj, telefone, endereco, email) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -34,16 +33,16 @@ public class FornecedorDAO {
         try {
             
             pstm = conn.prepareStatement(sql);
-             pstm.setString(1, objfornecedordto.getNome_empresa());
+            pstm.setString(1, objfornecedordto.getNome_empresa());
             pstm.setInt(2, objfornecedordto.getId_produto());
-             pstm.setString(3, objfornecedordto.getRazao_social());
-              pstm.setString(4, objfornecedordto.getCnpj());
-               pstm.setInt(5, objfornecedordto.getTelefone());
-                pstm.setString(6, objfornecedordto.getEndereco());
-                 pstm.setString(7, objfornecedordto.getEmail());
+            pstm.setString(3, objfornecedordto.getRazao_social());
+            pstm.setString(4, objfornecedordto.getCnpj());
+            pstm.setInt(5, objfornecedordto.getTelefone());
+            pstm.setString(6, objfornecedordto.getEndereco());
+            pstm.setString(7, objfornecedordto.getEmail());
                  
-                 pstm.execute();
-                 pstm.close();
+            pstm.execute();
+            pstm.close();
             
         } catch (SQLException erro) {
             
@@ -51,7 +50,8 @@ public class FornecedorDAO {
         }
     }
     
-    public ArrayList<FornecedorDTO> PesquisarFornecedor() {
+    @Override
+    public ArrayList<FornecedorDTO> pesquisarFornecedor() {
         
         String sql = "SELECT * FROM fornecedor";
         
@@ -66,7 +66,7 @@ public class FornecedorDAO {
             
             FornecedorDTO objfornecedorDTO = new FornecedorDTO();
             objfornecedorDTO.setId_fornecedor(rs.getInt("id_fornecedor"));
-             objfornecedorDTO.setNome_empresa(rs.getString("nome_empresa"));
+            objfornecedorDTO.setNome_empresa(rs.getString("nome_empresa"));
             objfornecedorDTO.setId_produto(rs.getInt("id_produto"));
             objfornecedorDTO.setRazao_social(rs.getString("razao_social"));
             objfornecedorDTO.setCnpj(rs.getString("cnpj"));
@@ -86,10 +86,11 @@ public class FornecedorDAO {
         return lista;
     }
     
-    
-    public void AlterarFornecedor(FornecedorDTO objfornecedordto) {
+     
+   @Override
+    public void alterarFornecedor(FornecedorDTO objfornecedordto) {
         
-        String sql = "UPDATE fornecedor SET nome_empresa = ?, id_produto = ?, razao_social = ?, cnpj = ?, telefone = ?, endereco = ?, email = ? WHERE id_fornecedor = ? ";
+        String sql = "UPDATE fornecedor SET nome_empresa = ?, razao_social = ?, cnpj = ?, telefone = ?, endereco = ?, email = ? WHERE id_fornecedor = ? ";
         
         
          conn = new ConexaoDAO().conexaoBD();
@@ -98,13 +99,12 @@ public class FornecedorDAO {
             
             pstm = conn.prepareStatement(sql);
             pstm.setString(1, objfornecedordto.getNome_empresa());
-            pstm.setInt(2, objfornecedordto.getId_produto());
-            pstm.setString(3, objfornecedordto.getRazao_social());
-            pstm.setString(4, objfornecedordto.getCnpj());
-            pstm.setInt(5, objfornecedordto.getTelefone());
-            pstm.setString(6, objfornecedordto.getEndereco());
-            pstm.setString(7, objfornecedordto.getEmail());
-            pstm.setInt(8, objfornecedordto.getId_fornecedor());
+            pstm.setString(2, objfornecedordto.getRazao_social());
+            pstm.setString(3, objfornecedordto.getCnpj());
+            pstm.setInt(4, objfornecedordto.getTelefone());
+            pstm.setString(5, objfornecedordto.getEndereco());
+            pstm.setString(6, objfornecedordto.getEmail());
+            pstm.setInt(7, objfornecedordto.getId_fornecedor());
             
             pstm.execute();
             pstm.close();
@@ -116,7 +116,7 @@ public class FornecedorDAO {
         
     }
     
-    
+    @Override
     public void excluirFornecedor(FornecedorDTO objfornecedordto) {
         
         String sql = "DELETE FROM fornecedor WHERE id_fornecedor = ?";
@@ -137,6 +137,24 @@ public class FornecedorDAO {
             JOptionPane.showMessageDialog(null, "FornecedorDAO Excluir" + erro);
         } 
     }
+    
+     @Override
+     public ResultSet listarIdProduto() {
+          
+          conn = new ConexaoDAO().conexaoBD();
+          
+          String sql = "SELECT *  FROM produto ORDER BY nome";
+          
+          try {
+              pstm = conn.prepareStatement(sql);
+              return pstm.executeQuery();
+              
+          } catch (SQLException erro) {
+              
+              JOptionPane.showMessageDialog(null, "EstoqueDAO listarIdProduto" + erro.getMessage());
+              return null;
+          }
+      }
 
     
 }
