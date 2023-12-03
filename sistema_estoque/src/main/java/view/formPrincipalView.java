@@ -40,6 +40,7 @@ public class formPrincipalView extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("sansserif", 0, 36)); // NOI18N
         jLabel1.setText("Bem Vindo");
 
+        btnTelaCadastroEstoque.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\BKP_POO_C_INTERFACES - Copia\\sistema_estoque\\src\\main\\java\\icons\\in-stock.png")); // NOI18N
         btnTelaCadastroEstoque.setText("Cadastrar e Consultar Estoque");
         btnTelaCadastroEstoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,6 +48,7 @@ public class formPrincipalView extends javax.swing.JFrame {
             }
         });
 
+        btnTelaCadastroFuncionario.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\BKP_POO_C_INTERFACES - Copia\\sistema_estoque\\src\\main\\java\\icons\\multiple-users-silhouette.png")); // NOI18N
         btnTelaCadastroFuncionario.setText("Cadastrar e Consultar Funcionario");
         btnTelaCadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,13 +56,16 @@ public class formPrincipalView extends javax.swing.JFrame {
             }
         });
 
+        btnTelaCadastroProdutos.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\BKP_POO_C_INTERFACES - Copia\\sistema_estoque\\src\\main\\java\\icons\\features.png")); // NOI18N
         btnTelaCadastroProdutos.setText("Cadastrar e Consultar Produtos");
+        btnTelaCadastroProdutos.setBorderPainted(false);
         btnTelaCadastroProdutos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTelaCadastroProdutosActionPerformed(evt);
             }
         });
 
+        btnTelaCadastroFornecedor.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\BKP_POO_C_INTERFACES - Copia\\sistema_estoque\\src\\main\\java\\icons\\supplier.png")); // NOI18N
         btnTelaCadastroFornecedor.setText("Cadastrar e Consultar um Fornecedor");
         btnTelaCadastroFornecedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +76,7 @@ public class formPrincipalView extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         jLabel2.setText("O que deseja fazer:");
 
+        btnSair.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\BKP_POO_C_INTERFACES - Copia\\sistema_estoque\\src\\main\\java\\icons\\logout.png")); // NOI18N
         btnSair.setText("Sair");
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +88,14 @@ public class formPrincipalView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(326, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnTelaCadastroProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnTelaCadastroFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnTelaCadastroEstoque, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnTelaCadastroFornecedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(384, 384, 384))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -91,18 +105,9 @@ public class formPrincipalView extends javax.swing.JFrame {
                         .addGap(358, 358, 358)
                         .addComponent(jLabel2))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(456, 456, 456)
-                        .addComponent(btnSair)))
+                        .addGap(418, 418, 418)
+                        .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(354, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnTelaCadastroEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btnTelaCadastroProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnTelaCadastroFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnTelaCadastroFornecedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(384, 384, 384))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,9 +124,9 @@ public class formPrincipalView extends javax.swing.JFrame {
                 .addComponent(btnTelaCadastroEstoque)
                 .addGap(18, 18, 18)
                 .addComponent(btnTelaCadastroFornecedor)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addGap(45, 45, 45)
                 .addComponent(btnSair)
-                .addGap(141, 141, 141))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
         pack();

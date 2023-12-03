@@ -44,7 +44,6 @@ view\formFornecedorView$9.class
 view\formProdutoView$1.class
 dao\ConexaoDAO.class
 view\formFuncionarioView$7.class
-view\listaTabelaFuncionario$1.class
 interfaces\ProdutoInterface.class
 view\formFornecedorView$6.class
 view\formProdutoView$4.class
@@ -58,7 +57,7 @@ view\formFornecedorView.class
 view\formFornecedorView$4.class
 view\formFuncionarioView$6.class
 interfaces\FuncionarioInterface.class
+view\formLogin$3.class
 dto\FuncionarioDTO.class
 view\formPrincipalView.class
 view\formPrincipalView$5.class
-view\listaTabelaFuncionario.class
