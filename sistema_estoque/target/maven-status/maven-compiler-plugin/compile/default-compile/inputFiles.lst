@@ -1,21 +1,21 @@
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\dao\ConexaoDAO.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\dto\CategoriaDTO.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\view\formProdutoView.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\dto\ProdutoDTO.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\view\formPrincipalView.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\dto\EstoqueDTO.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\dto\FornecedorDTO.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\view\formFuncionarioView.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\dao\EstoqueDAO.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\dao\FuncionarioValidacaoLogin.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\view\formLogin.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\dao\FuncionarioDAO.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\view\formEstoqueView.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\interfaces\FornecedorInterface.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\dto\FuncionarioDTO.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\view\formFornecedorView.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\dao\FornecedorDAO.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\interfaces\EstoqueInterface.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\interfaces\FuncionarioInterface.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\dao\ProdutoDAO.java
-C:\Users\Estudo\Desktop\BKP_POO_C_INTERFACES - Copia\sistema_estoque\src\main\java\interfaces\ProdutoInterface.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\gui\formEstoqueView.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\gui\formFornecedorView.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\repository\FornecedorDAO.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\interfaces\FuncionarioInterface.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\interfaces\ProdutoInterface.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\repository\ConexaoDAO.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\interfaces\EstoqueInterface.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\gui\formProdutoView.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\gui\formLogin.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\model\CategoriaDTO.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\repository\ProdutoDAO.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\interfaces\FornecedorInterface.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\model\ProdutoDTO.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\repository\FuncionarioDAO.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\model\EstoqueDTO.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\model\FornecedorDTO.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\repository\FuncionarioValidacaoLogin.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\gui\formFuncionarioView.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\gui\formPrincipalView.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\repository\EstoqueDAO.java
+C:\Users\Estudo\Desktop\sistema_estoque\src\main\java\com\yuricarias\sistema_estoque\model\FuncionarioDTO.java
