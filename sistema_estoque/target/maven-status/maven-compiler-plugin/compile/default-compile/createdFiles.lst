@@ -3,7 +3,6 @@ com\yuricarias\sistema_estoque\repository\FuncionarioValidacaoLogin.class
 com\yuricarias\sistema_estoque\gui\formFuncionarioView$3.class
 com\yuricarias\sistema_estoque\interfaces\EstoqueInterface.class
 com\yuricarias\sistema_estoque\model\FornecedorDTO.class
-com\yuricarias\sistema_estoque\gui\formFornecedorView$9.class
 com\yuricarias\sistema_estoque\gui\formProdutoView$7.class
 com\yuricarias\sistema_estoque\gui\formFornecedorView$2.class
 com\yuricarias\sistema_estoque\gui\formEstoqueView.class
@@ -18,7 +17,6 @@ com\yuricarias\sistema_estoque\gui\formPrincipalView$3.class
 com\yuricarias\sistema_estoque\gui\formLogin$2.class
 com\yuricarias\sistema_estoque\repository\ConexaoDAO.class
 com\yuricarias\sistema_estoque\gui\formProdutoView.class
-com\yuricarias\sistema_estoque\gui\formFuncionarioView$9.class
 com\yuricarias\sistema_estoque\gui\formFuncionarioView$2.class
 com\yuricarias\sistema_estoque\model\ProdutoDTO.class
 com\yuricarias\sistema_estoque\repository\FornecedorDAO.class
@@ -30,10 +28,8 @@ com\yuricarias\sistema_estoque\gui\formProdutoView$1.class
 com\yuricarias\sistema_estoque\gui\formPrincipalView$5.class
 com\yuricarias\sistema_estoque\gui\formProdutoView$5.class
 com\yuricarias\sistema_estoque\interfaces\FornecedorInterface.class
-com\yuricarias\sistema_estoque\gui\formFornecedorView$8.class
 com\yuricarias\sistema_estoque\gui\formLogin$1.class
 com\yuricarias\sistema_estoque\gui\formPrincipalView$2.class
-com\yuricarias\sistema_estoque\gui\formProdutoView$8.class
 com\yuricarias\sistema_estoque\gui\formEstoqueView$7.class
 com\yuricarias\sistema_estoque\gui\formFornecedorView$4.class
 com\yuricarias\sistema_estoque\gui\formProdutoView$2.class
@@ -45,7 +41,6 @@ com\yuricarias\sistema_estoque\gui\formFuncionarioView$5.class
 com\yuricarias\sistema_estoque\model\EstoqueDTO.class
 com\yuricarias\sistema_estoque\interfaces\FuncionarioInterface.class
 com\yuricarias\sistema_estoque\gui\formPrincipalView$6.class
-com\yuricarias\sistema_estoque\gui\formFuncionarioView$8.class
 com\yuricarias\sistema_estoque\model\CategoriaDTO.class
 com\yuricarias\sistema_estoque\gui\formLogin$3.class
 com\yuricarias\sistema_estoque\gui\formPrincipalView.class

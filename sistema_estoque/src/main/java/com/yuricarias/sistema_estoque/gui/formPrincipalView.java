@@ -27,44 +27,23 @@ public class formPrincipalView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        btnTelaCadastroFornecedor = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        btnSair = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btnTelaCadastroEstoque = new javax.swing.JButton();
         btnTelaCadastroFuncionario = new javax.swing.JButton();
         btnTelaCadastroProdutos = new javax.swing.JButton();
-        btnTelaCadastroFornecedor = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        btnSair = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("sansserif", 0, 36)); // NOI18N
-        jLabel1.setText("Bem Vindo");
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        btnTelaCadastroEstoque.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\in-stock.png")); // NOI18N
-        btnTelaCadastroEstoque.setText("Cadastrar e Consultar Estoque");
-        btnTelaCadastroEstoque.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTelaCadastroEstoqueActionPerformed(evt);
-            }
-        });
-
-        btnTelaCadastroFuncionario.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\multiple-users-silhouette.png")); // NOI18N
-        btnTelaCadastroFuncionario.setText("Cadastrar e Consultar Funcionario");
-        btnTelaCadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTelaCadastroFuncionarioActionPerformed(evt);
-            }
-        });
-
-        btnTelaCadastroProdutos.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\features.png")); // NOI18N
-        btnTelaCadastroProdutos.setText("Cadastrar e Consultar Produtos");
-        btnTelaCadastroProdutos.setBorderPainted(false);
-        btnTelaCadastroProdutos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTelaCadastroProdutosActionPerformed(evt);
-            }
-        });
-
+        btnTelaCadastroFornecedor.setBackground(new java.awt.Color(51, 0, 255));
+        btnTelaCadastroFornecedor.setForeground(new java.awt.Color(255, 255, 255));
         btnTelaCadastroFornecedor.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\supplier.png")); // NOI18N
         btnTelaCadastroFornecedor.setText("Cadastrar e Consultar um Fornecedor");
         btnTelaCadastroFornecedor.addActionListener(new java.awt.event.ActionListener() {
@@ -74,8 +53,11 @@ public class formPrincipalView extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("O que deseja fazer:");
 
+        btnSair.setBackground(new java.awt.Color(153, 0, 0));
+        btnSair.setForeground(new java.awt.Color(255, 255, 255));
         btnSair.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\logout.png")); // NOI18N
         btnSair.setText("Sair");
         btnSair.addActionListener(new java.awt.event.ActionListener() {
@@ -84,61 +66,117 @@ public class formPrincipalView extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("sansserif", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Bem Vindo");
+
+        btnTelaCadastroEstoque.setBackground(new java.awt.Color(51, 0, 255));
+        btnTelaCadastroEstoque.setForeground(new java.awt.Color(255, 255, 255));
+        btnTelaCadastroEstoque.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\in-stock.png")); // NOI18N
+        btnTelaCadastroEstoque.setText("Cadastrar e Consultar Estoque");
+        btnTelaCadastroEstoque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTelaCadastroEstoqueActionPerformed(evt);
+            }
+        });
+
+        btnTelaCadastroFuncionario.setBackground(new java.awt.Color(51, 0, 255));
+        btnTelaCadastroFuncionario.setForeground(new java.awt.Color(255, 255, 255));
+        btnTelaCadastroFuncionario.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\multiple-users-silhouette.png")); // NOI18N
+        btnTelaCadastroFuncionario.setText("Cadastrar e Consultar Funcionario");
+        btnTelaCadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTelaCadastroFuncionarioActionPerformed(evt);
+            }
+        });
+
+        btnTelaCadastroProdutos.setBackground(new java.awt.Color(51, 0, 255));
+        btnTelaCadastroProdutos.setForeground(new java.awt.Color(255, 255, 255));
+        btnTelaCadastroProdutos.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\features.png")); // NOI18N
+        btnTelaCadastroProdutos.setText("Cadastrar e Consultar Produtos");
+        btnTelaCadastroProdutos.setBorderPainted(false);
+        btnTelaCadastroProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTelaCadastroProdutosActionPerformed(evt);
+            }
+        });
+
+        jPanel2.setLayout(null);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\logo3-removebg-preview.png")); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnTelaCadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnTelaCadastroFornecedor, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(90, 90, 90)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnTelaCadastroEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnTelaCadastroProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(421, 421, 421)
+                        .addComponent(btnSair)))
+                .addContainerGap(173, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(369, 369, 369)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
+                        .addGap(160, 160, 160)))
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(99, 99, 99)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnTelaCadastroProdutos)
+                    .addComponent(btnTelaCadastroFuncionario))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnTelaCadastroFornecedor)
+                    .addComponent(btnTelaCadastroEstoque))
+                .addGap(96, 96, 96)
+                .addComponent(btnSair)
+                .addGap(83, 83, 83))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(376, 376, 376)
-                .addComponent(jLabel2)
-                .addContainerGap(359, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(362, 362, 362)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnTelaCadastroFornecedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnTelaCadastroEstoque, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnTelaCadastroProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnTelaCadastroFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(415, 415, 415)
-                .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel1)
-                .addGap(34, 34, 34)
-                .addComponent(jLabel2)
-                .addGap(45, 45, 45)
-                .addComponent(btnTelaCadastroFuncionario)
-                .addGap(18, 18, 18)
-                .addComponent(btnTelaCadastroProdutos)
-                .addGap(18, 18, 18)
-                .addComponent(btnTelaCadastroEstoque)
-                .addGap(18, 18, 18)
-                .addComponent(btnTelaCadastroFornecedor)
-                .addGap(29, 29, 29)
-                .addComponent(btnSair)
-                .addContainerGap(108, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(963, 593));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnTelaCadastroEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaCadastroEstoqueActionPerformed
-       exibirTelaCadastroEstoque();
-    }//GEN-LAST:event_btnTelaCadastroEstoqueActionPerformed
-
-    private void btnTelaCadastroFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaCadastroFornecedorActionPerformed
-        exibirTelaCadastroFornecedor();
-    }//GEN-LAST:event_btnTelaCadastroFornecedorActionPerformed
 
     private void btnTelaCadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaCadastroFuncionarioActionPerformed
         exibirTelaCadastroFuncionario();
@@ -147,6 +185,14 @@ public class formPrincipalView extends javax.swing.JFrame {
     private void btnTelaCadastroProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaCadastroProdutosActionPerformed
         exibirTelaCadastroProduto();
     }//GEN-LAST:event_btnTelaCadastroProdutosActionPerformed
+
+    private void btnTelaCadastroFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaCadastroFornecedorActionPerformed
+        exibirTelaCadastroFornecedor();
+    }//GEN-LAST:event_btnTelaCadastroFornecedorActionPerformed
+
+    private void btnTelaCadastroEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaCadastroEstoqueActionPerformed
+        exibirTelaCadastroEstoque();
+    }//GEN-LAST:event_btnTelaCadastroEstoqueActionPerformed
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         sairSistema();
@@ -195,6 +241,9 @@ public class formPrincipalView extends javax.swing.JFrame {
     private javax.swing.JButton btnTelaCadastroProdutos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 
     
