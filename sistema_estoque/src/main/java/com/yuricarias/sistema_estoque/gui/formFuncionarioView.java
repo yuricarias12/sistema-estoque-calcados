@@ -152,7 +152,7 @@ public class formFuncionarioView extends javax.swing.JFrame {
 
         txtCidade.setBackground(new java.awt.Color(255, 255, 255));
 
-        btnCadastrar.setBackground(new java.awt.Color(51, 0, 255));
+        btnCadastrar.setBackground(new java.awt.Color(0, 0, 153));
         btnCadastrar.setForeground(new java.awt.Color(255, 255, 255));
         btnCadastrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\news.png")); // NOI18N
         btnCadastrar.setText("Cadastrar");
@@ -162,7 +162,7 @@ public class formFuncionarioView extends javax.swing.JFrame {
             }
         });
 
-        btnAlterarInformacoes.setBackground(new java.awt.Color(51, 0, 255));
+        btnAlterarInformacoes.setBackground(new java.awt.Color(0, 0, 153));
         btnAlterarInformacoes.setForeground(new java.awt.Color(255, 255, 255));
         btnAlterarInformacoes.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\refresh.png")); // NOI18N
         btnAlterarInformacoes.setText("Alterar Informações");
@@ -172,7 +172,7 @@ public class formFuncionarioView extends javax.swing.JFrame {
             }
         });
 
-        btnLimparCampos.setBackground(new java.awt.Color(51, 0, 255));
+        btnLimparCampos.setBackground(new java.awt.Color(0, 0, 153));
         btnLimparCampos.setForeground(new java.awt.Color(255, 255, 255));
         btnLimparCampos.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\eraser.png")); // NOI18N
         btnLimparCampos.setText("Limpar Campos");
@@ -212,7 +212,7 @@ public class formFuncionarioView extends javax.swing.JFrame {
             }
         });
 
-        btnCarregarCampos.setBackground(new java.awt.Color(51, 0, 255));
+        btnCarregarCampos.setBackground(new java.awt.Color(0, 0, 153));
         btnCarregarCampos.setForeground(new java.awt.Color(255, 255, 255));
         btnCarregarCampos.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\reload.png")); // NOI18N
         btnCarregarCampos.setText("Carregar Informações");
@@ -222,7 +222,7 @@ public class formFuncionarioView extends javax.swing.JFrame {
             }
         });
 
-        btnVoltar.setBackground(new java.awt.Color(51, 0, 255));
+        btnVoltar.setBackground(new java.awt.Color(0, 0, 153));
         btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\return.png")); // NOI18N
         btnVoltar.setText("Voltar");

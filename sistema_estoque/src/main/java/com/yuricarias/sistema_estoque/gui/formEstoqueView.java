@@ -121,7 +121,7 @@ public class formEstoqueView extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Descrição");
 
-        btnCadastrarEstoque.setBackground(new java.awt.Color(51, 0, 255));
+        btnCadastrarEstoque.setBackground(new java.awt.Color(0, 0, 153));
         btnCadastrarEstoque.setForeground(new java.awt.Color(255, 255, 255));
         btnCadastrarEstoque.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\news.png")); // NOI18N
         btnCadastrarEstoque.setText("Cadastrar");
@@ -132,7 +132,7 @@ public class formEstoqueView extends javax.swing.JFrame {
             }
         });
 
-        btnAlterarInformacoesEstoque.setBackground(new java.awt.Color(51, 0, 255));
+        btnAlterarInformacoesEstoque.setBackground(new java.awt.Color(0, 0, 153));
         btnAlterarInformacoesEstoque.setForeground(new java.awt.Color(255, 255, 255));
         btnAlterarInformacoesEstoque.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\refresh.png")); // NOI18N
         btnAlterarInformacoesEstoque.setText("Alterar Informações");
@@ -143,7 +143,7 @@ public class formEstoqueView extends javax.swing.JFrame {
             }
         });
 
-        btnLimparCamposEstoque.setBackground(new java.awt.Color(51, 0, 255));
+        btnLimparCamposEstoque.setBackground(new java.awt.Color(0, 0, 153));
         btnLimparCamposEstoque.setForeground(new java.awt.Color(255, 255, 255));
         btnLimparCamposEstoque.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\eraser.png")); // NOI18N
         btnLimparCamposEstoque.setText("Limpar Campos");
@@ -171,7 +171,7 @@ public class formEstoqueView extends javax.swing.JFrame {
         tabelaEstoque.setShowHorizontalLines(true);
         jScrollPane1.setViewportView(tabelaEstoque);
 
-        btnCarregarInformacoesEstoque.setBackground(new java.awt.Color(51, 0, 255));
+        btnCarregarInformacoesEstoque.setBackground(new java.awt.Color(0, 0, 153));
         btnCarregarInformacoesEstoque.setForeground(new java.awt.Color(255, 255, 255));
         btnCarregarInformacoesEstoque.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\reload.png")); // NOI18N
         btnCarregarInformacoesEstoque.setText("Carregar Informações");
@@ -192,7 +192,7 @@ public class formEstoqueView extends javax.swing.JFrame {
             }
         });
 
-        btnVoltar.setBackground(new java.awt.Color(51, 0, 255));
+        btnVoltar.setBackground(new java.awt.Color(0, 0, 153));
         btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\return.png")); // NOI18N
         btnVoltar.setText("Voltar");

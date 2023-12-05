@@ -79,7 +79,8 @@ public class formProdutoView extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
-        btnCarregarInformacoesProduto.setBackground(new java.awt.Color(51, 0, 255));
+        btnCarregarInformacoesProduto.setBackground(new java.awt.Color(0, 0, 153));
+        btnCarregarInformacoesProduto.setForeground(new java.awt.Color(255, 255, 255));
         btnCarregarInformacoesProduto.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\reload.png")); // NOI18N
         btnCarregarInformacoesProduto.setText("Carregar Informações");
         btnCarregarInformacoesProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +89,8 @@ public class formProdutoView extends javax.swing.JFrame {
             }
         });
 
-        btnLimparCamposProduto.setBackground(new java.awt.Color(51, 0, 255));
+        btnLimparCamposProduto.setBackground(new java.awt.Color(0, 0, 153));
+        btnLimparCamposProduto.setForeground(new java.awt.Color(255, 255, 255));
         btnLimparCamposProduto.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\eraser.png")); // NOI18N
         btnLimparCamposProduto.setText("Limpar Campos");
         btnLimparCamposProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +99,8 @@ public class formProdutoView extends javax.swing.JFrame {
             }
         });
 
-        btnVoltar.setBackground(new java.awt.Color(51, 0, 255));
+        btnVoltar.setBackground(new java.awt.Color(0, 0, 153));
+        btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\return.png")); // NOI18N
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -116,23 +119,31 @@ public class formProdutoView extends javax.swing.JFrame {
             }
         });
 
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Modelo");
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("ID_Produto");
 
         txtNome.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Categoria");
 
+        cbxCategoria.setBackground(new java.awt.Color(255, 255, 255));
+        cbxCategoria.setForeground(new java.awt.Color(0, 0, 0));
         cbxCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione" }));
 
         txtMarca.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Código_SKU");
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Marca");
 
-        btnAlterarInformacoes.setBackground(new java.awt.Color(51, 0, 255));
+        btnAlterarInformacoes.setBackground(new java.awt.Color(0, 0, 153));
+        btnAlterarInformacoes.setForeground(new java.awt.Color(255, 255, 255));
         btnAlterarInformacoes.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\refresh.png")); // NOI18N
         btnAlterarInformacoes.setText("Alterar Informações");
         btnAlterarInformacoes.addActionListener(new java.awt.event.ActionListener() {
@@ -141,6 +152,7 @@ public class formProdutoView extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Cor");
 
         txtModelo.setBackground(new java.awt.Color(255, 255, 255));
@@ -149,6 +161,7 @@ public class formProdutoView extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Cadastro de Produtos");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nome");
 
         txtCodigoSku.setBackground(new java.awt.Color(255, 255, 255));
@@ -157,7 +170,8 @@ public class formProdutoView extends javax.swing.JFrame {
 
         txtTamanho.setBackground(new java.awt.Color(255, 255, 255));
 
-        btnCadastrarProduto.setBackground(new java.awt.Color(51, 0, 255));
+        btnCadastrarProduto.setBackground(new java.awt.Color(0, 0, 153));
+        btnCadastrarProduto.setForeground(new java.awt.Color(255, 255, 255));
         btnCadastrarProduto.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\news.png")); // NOI18N
         btnCadastrarProduto.setText("Cadastrar");
         btnCadastrarProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -182,6 +196,7 @@ public class formProdutoView extends javax.swing.JFrame {
         tabelaProdutos.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tabelaProdutos);
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Tamanho");
 
         txtIdProduto.setEnabled(false);

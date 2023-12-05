@@ -42,7 +42,7 @@ public class formPrincipalView extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        btnTelaCadastroFornecedor.setBackground(new java.awt.Color(51, 0, 255));
+        btnTelaCadastroFornecedor.setBackground(new java.awt.Color(0, 0, 153));
         btnTelaCadastroFornecedor.setForeground(new java.awt.Color(255, 255, 255));
         btnTelaCadastroFornecedor.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\supplier.png")); // NOI18N
         btnTelaCadastroFornecedor.setText("Cadastrar e Consultar um Fornecedor");
@@ -70,7 +70,7 @@ public class formPrincipalView extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Bem Vindo");
 
-        btnTelaCadastroEstoque.setBackground(new java.awt.Color(51, 0, 255));
+        btnTelaCadastroEstoque.setBackground(new java.awt.Color(0, 0, 153));
         btnTelaCadastroEstoque.setForeground(new java.awt.Color(255, 255, 255));
         btnTelaCadastroEstoque.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\in-stock.png")); // NOI18N
         btnTelaCadastroEstoque.setText("Cadastrar e Consultar Estoque");
@@ -80,7 +80,7 @@ public class formPrincipalView extends javax.swing.JFrame {
             }
         });
 
-        btnTelaCadastroFuncionario.setBackground(new java.awt.Color(51, 0, 255));
+        btnTelaCadastroFuncionario.setBackground(new java.awt.Color(0, 0, 153));
         btnTelaCadastroFuncionario.setForeground(new java.awt.Color(255, 255, 255));
         btnTelaCadastroFuncionario.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\multiple-users-silhouette.png")); // NOI18N
         btnTelaCadastroFuncionario.setText("Cadastrar e Consultar Funcionario");
@@ -90,7 +90,7 @@ public class formPrincipalView extends javax.swing.JFrame {
             }
         });
 
-        btnTelaCadastroProdutos.setBackground(new java.awt.Color(51, 0, 255));
+        btnTelaCadastroProdutos.setBackground(new java.awt.Color(0, 0, 153));
         btnTelaCadastroProdutos.setForeground(new java.awt.Color(255, 255, 255));
         btnTelaCadastroProdutos.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\features.png")); // NOI18N
         btnTelaCadastroProdutos.setText("Cadastrar e Consultar Produtos");

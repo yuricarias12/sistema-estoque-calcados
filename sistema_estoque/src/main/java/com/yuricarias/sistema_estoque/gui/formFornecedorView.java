@@ -94,7 +94,8 @@ public class formFornecedorView extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        btnAlterarInformacoesFornecedor.setBackground(new java.awt.Color(51, 0, 255));
+        btnAlterarInformacoesFornecedor.setBackground(new java.awt.Color(0, 0, 153));
+        btnAlterarInformacoesFornecedor.setForeground(new java.awt.Color(255, 255, 255));
         btnAlterarInformacoesFornecedor.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\refresh.png")); // NOI18N
         btnAlterarInformacoesFornecedor.setText("Alterar Informações");
         btnAlterarInformacoesFornecedor.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +112,8 @@ public class formFornecedorView extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("ID_Produto");
 
-        btnLimparCampos.setBackground(new java.awt.Color(51, 0, 255));
+        btnLimparCampos.setBackground(new java.awt.Color(0, 0, 153));
+        btnLimparCampos.setForeground(new java.awt.Color(255, 255, 255));
         btnLimparCampos.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\eraser.png")); // NOI18N
         btnLimparCampos.setText("Limpar Campos");
         btnLimparCampos.addActionListener(new java.awt.event.ActionListener() {
@@ -123,7 +125,8 @@ public class formFornecedorView extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Razão Social");
 
-        btnVoltar.setBackground(new java.awt.Color(51, 0, 255));
+        btnVoltar.setBackground(new java.awt.Color(0, 0, 153));
+        btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\return.png")); // NOI18N
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -156,7 +159,7 @@ public class formFornecedorView extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Email");
 
-        btnCadastrar.setBackground(new java.awt.Color(51, 0, 255));
+        btnCadastrar.setBackground(new java.awt.Color(0, 0, 153));
         btnCadastrar.setForeground(new java.awt.Color(255, 255, 255));
         btnCadastrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\news.png")); // NOI18N
         btnCadastrar.setText("Cadastrar");
@@ -192,7 +195,8 @@ public class formFornecedorView extends javax.swing.JFrame {
         tabelaFornecedor.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(tabelaFornecedor);
 
-        btnCarregarInformacoesFornecedor.setBackground(new java.awt.Color(51, 0, 255));
+        btnCarregarInformacoesFornecedor.setBackground(new java.awt.Color(0, 0, 153));
+        btnCarregarInformacoesFornecedor.setForeground(new java.awt.Color(255, 255, 255));
         btnCarregarInformacoesFornecedor.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\reload.png")); // NOI18N
         btnCarregarInformacoesFornecedor.setText("Carregar Informações");
         btnCarregarInformacoesFornecedor.addActionListener(new java.awt.event.ActionListener() {
