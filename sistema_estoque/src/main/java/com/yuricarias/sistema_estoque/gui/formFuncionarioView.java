@@ -31,6 +31,22 @@ public class formFuncionarioView extends javax.swing.JFrame {
         tabelaFuncionario.getTableHeader().setBackground(new Color(32, 136, 203));
         tabelaFuncionario.getTableHeader().setForeground(new Color(0, 0, 0));
         tabelaFuncionario.setRowHeight(25);
+        
+        
+        
+         try {
+            
+            btnCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/news.png")));
+            btnAlterarInformacoes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/refresh.png")));
+            imgLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/logo300.png")));
+            btnLimparCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/eraser.png")));
+            btnCarregarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/reload.png")));
+            btnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/trash.png")));
+            btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/return.png")));
+
+        } catch (Exception e) {
+    e.printStackTrace();
+}
     }
 
     /**
@@ -77,7 +93,7 @@ public class formFuncionarioView extends javax.swing.JFrame {
         btnCarregarCampos = new javax.swing.JButton();
         btnVoltar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
+        imgLogo = new javax.swing.JLabel();
 
         textField1.setText("textField1");
 
@@ -198,7 +214,7 @@ public class formFuncionarioView extends javax.swing.JFrame {
         ));
         tabelaFuncionario.setFocusable(false);
         tabelaFuncionario.setRowHeight(25);
-        tabelaFuncionario.setSelectionBackground(new java.awt.Color(0, 204, 51));
+        tabelaFuncionario.setSelectionBackground(new java.awt.Color(102, 102, 255));
         tabelaFuncionario.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tabelaFuncionario);
 
@@ -234,7 +250,7 @@ public class formFuncionarioView extends javax.swing.JFrame {
 
         jPanel2.setLayout(null);
 
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\logo300.jpeg")); // NOI18N
+        imgLogo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\logo300.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -311,7 +327,7 @@ public class formFuncionarioView extends javax.swing.JFrame {
                                     .addComponent(jLabel11)
                                     .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(34, 34, 34)))))
                 .addContainerGap())
         );
@@ -348,7 +364,7 @@ public class formFuncionarioView extends javax.swing.JFrame {
                                             .addComponent(txtMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGap(22, 22, 22)
-                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -500,12 +516,12 @@ public class formFuncionarioView extends javax.swing.JFrame {
     private javax.swing.JButton btnLimparCampos;
     private javax.swing.JButton btnVoltar;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel imgLogo;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

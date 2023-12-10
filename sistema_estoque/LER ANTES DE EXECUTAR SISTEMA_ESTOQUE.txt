@@ -1,0 +1,318 @@
+
+Executar os comandos SQL em ordem para criação das tabelas do banco de dados:
+
+nome do banco de dados: sistema_estoque
+
+
+
+CREATE TABLE categoria (
+
+	id_categoria INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nome_categoria VARCHAR(150) NOT NULL
+);
+
+
+INSERT INTO categoria (nome_categoria) VALUES
+  ('Esportivo'),
+  ('Social'),
+  ('Casual'),
+  ('Chinelos'),
+  ('Infantil'),
+  ('Botas'),
+  ('Sandálias'),
+  ('Sapatilhas'),
+  ('Salto Alto'),
+  ('Tênis Conforto'),
+  ('Tênis Esportivo'),
+  ('Tênis Casual'),
+  ('Tênis de Corrida'),
+  ('Chuteiras'),
+  ('Chinelos Masculinos'),
+  ('Chinelos Femininos'),
+  ('Chinelos Infantis'),
+  ('Chinelos de Praia'),
+  ('Chinelos Esportivos'),
+  ('Botas Femininas'),
+  ('Botas Masculinas'),
+  ('Botas Infantis'),
+  ('Botas de Cano Longo'),
+  ('Botas de Cano Curto');
+
+--------------------------------------------------------------------------
+
+
+
+CREATE TABLE produto (
+    id_produto INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    tamanho INT NOT NULL,
+    marca VARCHAR(255) NOT NULL,
+    cor VARCHAR(150) NOT NULL,
+    id_categoria INT NOT NULL,
+    codigo_sku VARCHAR(255) NOT NULL UNIQUE,
+    modelo VARCHAR(255) NOT NULL,
+    FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria)
+);
+
+
+
+
+INSERT INTO produto (nome, tamanho, marca, cor, id_categoria, codigo_sku, modelo) VALUES
+  ('Tênis Esportivo Nike Air Max', 41, 'Nike', 'Preto', 1, 'TNX001', 'Air Max 2023'),
+  ('Sapato Social Couro Legítimo', 40, 'Calvin Klein', 'Preto', 2, 'SSC002', 'Elegance 3000'),
+  ('Tênis Casual Vizzano', 37, 'Vizzano', 'Branco', 3, 'TVC003', 'Everyday Casual'),
+  ('Chinelo Adidas Duramo Slide', 42, 'Adidas', 'Azul', 4, 'CAD004', 'Duramo Slide'),
+  ('Sandalia Infantil Barbie', 25, 'Grendene', 'Rosa', 5, 'SIB005', 'Barbie Fashion'),
+  ('Bota Cano Curto Feminina', 38, 'Beira Rio', 'Marrom', 6, 'BCF006', 'Classic Short'),
+  ('Sandália Salto Alto', 36, 'Vizzano', 'Preto', 8, 'SSA007', 'Elegance High Heel'),
+  ('Tênis Conforto OrthoPauher', 39, 'OrthoPauher', 'Branco', 10, 'TCO008', 'Comfort Plus'),
+  ('Bota Masculina Adventure', 43, 'Bull Terrier', 'Café', 6, 'BMA009', 'Explorer Pro'),
+  ('Chinelo Feminino Havaianas Slim', 37, 'Havaianas', 'Dourado', 2, 'CFH010', 'Slim Gold'),
+  ('Sapatênis Casual Democrata', 42, 'Democrata', 'Azul Marinho', 3, 'SCD011', 'Urban Style'),
+  ('Sandália Infantil Hot Wheels', 26, 'Grendene', 'Azul', 5, 'SIH012', 'Hot Wheels Adventure'),
+  ('Bota Cano Longo Feminina', 37, 'Bottero', 'Preto', 6, 'BCL013', 'Fashion Long'),
+  ('Tênis Esportivo Puma Ignite', 40, 'Puma', 'Vermelho', 1, 'TEP014', 'Ignite XT'),
+  ('Chinelo Slide Masculino Nike', 44, 'Nike', 'Branco', 4, 'CSM015', 'Benassi JDI'),
+  ('Sapatilha Floral Infantil', 23, 'Molekinha', 'Floral', 5, 'SFI016', 'Floral Kids'),
+  ('Bota Cano Alto Feminina', 36, 'Beira Rio', 'Cinza', 6, 'BCA017', 'Fashion Knee-High'),
+  ('Tênis Casual Adidas Superstar', 38, 'Adidas', 'Branco', 3, 'TCAS018', 'Superstar Originals'),
+  ('Sandália Rasteira Feminina', 35, 'Vizzano', 'Bege', 7, 'SRF019', 'Comfort Rasteira'),
+  ('Bota Masculina Timberland', 41, 'Timberland', 'Caramelo', 6, 'BMT020', 'Yellow Boot'),
+  ('Chinelo Feminino Ipanema Anatomica', 39, 'Ipanema', 'Roxo', 2, 'CFA021', 'Anatomica Feminino'),
+  ('Tênis Esportivo Asics Gel Kayano', 42, 'Asics', 'Verde', 1, 'TEAK022', 'Gel Kayano 28'),
+  ('Sapato Social Ferracini', 40, 'Ferracini', 'Marrom', 2, 'SSF023', 'Elegance Ferracini'),
+  ('Sandália Plataforma Feminina', 37, 'Vizzano', 'Caramelo', 8, 'SPF024', 'Plataforma Comfort'),
+  ('Tênis Casual Keds Champion', 38, 'Keds', 'Azul', 3, 'TCK025', 'Champion Original');
+  ('Sapatênis Casual', 40, 'Nike', 'Marrom', 1, 'SKU001', 'Air Comfort'),
+  ('Tênis Esportivo Running', 42, 'Adidas', 'Preto', 2, 'SKU002', 'Ultra Boost 2.0'),
+  ('Bota de Couro Masculina', 39, 'Timberland', 'Café', 3, 'SKU003', 'Classic Waterproof'),
+  ('Sandália Slide Feminina', 37, 'Puma', 'Rosa', 4, 'SKU004', 'Fenty by Rihanna'),
+  ('Chinelo Slide Unissex', 43, 'Havaianas', 'Azul', 5, 'SKU005', 'Top Mix'),
+  ('Sapatilha Clássica', 38, 'Arezzo', 'Bege', 6, 'SKU006', 'Ballet Flat'),
+  ('Sapato Social Couro', 41, 'Calvin Klein', 'Preto', 7, 'SKU007', 'Oxford Elegance'),
+  ('Mocassim Masculino', 40, 'Ferracini', 'Marinho', 8, 'SKU008', 'Drive Comfort'),
+  ('Sneaker Cano Alto', 36, 'Vans', 'Branco', 9, 'SKU009', 'Sk8-Hi Classic'),
+  ('Alpargata Estampada', 37, 'Carmen Steffens', 'Colorida', 10, 'SKU010', 'Summer Vibes'),
+  ('Botinha Infantil', 28, 'Melissa', 'Roxa', 11, 'SKU011', 'Mini Ultragirl'),
+  ('Sandalia Anabela', 35, 'Schutz', 'Dourado', 12, 'SKU012', 'Lace Up'),
+  ('Tênis Slip-On', 39, 'Converse', 'Preto', 13, 'SKU013', 'Chuck Taylor All Star'),
+  ('Espadrille Confortável', 36, 'Dumond', 'Verde', 14, 'SKU014', 'Anabela Floral'),
+  ('Sapato Derby Couro', 42, 'Clarks', 'Tabaco', 15, 'SKU015', 'Batcombe Wing'),
+  ('Bota Coturno Feminina', 38, 'Ramarim', 'Vinho', 16, 'SKU016', 'Rockstyle'),
+  ('Tamanco Salto Alto', 37, 'Carrano', 'Azul', 17, 'SKU017', 'Verniz Power'),
+  ('Sapatilha Bailarina', 36, 'Scholl', 'Bege', 18, 'SKU018', 'Comfort Step'),
+  ('Tênis Skate Masculino', 44, 'DC Shoes', 'Cinza', 19, 'SKU019', 'Pure High-Top'),
+  ('Sapatênis Couro Legítimo', 41, 'Osklen', 'Caramelo', 20, 'SKU020', 'Riva'),
+  ('Chinelo Slide Unissex', 39, 'Rider', 'Amarelo', 21, 'SKU021', 'Duo II'),
+  ('Sandália Rasteira', 35, 'Vizzano', 'Prata', 22, 'SKU022', 'Metal Shine'),
+  ('Sapato Social Clássico', 43, 'Dolce & Gabbana', 'Preto', 23, 'SKU023', 'Oxford Classico'),
+  ('Tênis Esportivo Leve', 38, 'New Balance', 'Verde', 24, 'SKU024', 'Fresh Foam'),
+  ('Bota Over-the-Knee', 37, 'Schutz', 'Preto', 24, 'SKU025', 'Lace Up Suede');
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+CREATE TABLE fornecedor (
+
+	id_fornecedor INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nome_empresa VARCHAR(255) NOT NULL UNIQUE,
+	id_produto INT NOT NULL,
+	razao_social VARCHAR(255) NOT NULL,
+	cnpj VARCHAR(255) NOT NULL UNIQUE,
+	telefone INT NOT NULL,
+	endereco VARCHAR(255) NOT NULL,
+	email VARCHAR(255) NOT NULL UNIQUE,
+
+	FOREIGN KEY (id_produto) REFERENCES produto(id_produto)
+	
+
+);
+
+
+
+INSERT INTO fornecedor (nome_empresa, id_produto, razao_social, cnpj, telefone, endereco, email) VALUES
+  ('Distribuidora de Calçados Nike', 1, 'Distribuidora Nike Razão Social', '12345678901236', 123456787, 'Rua Nike, 125', 'nike@fornecedor.com'),
+  ('Calvin Klein Calçados', 2, 'Calvin Klein Razão Social', '98765432109878', 987654319, 'Avenida Calvin, 458', 'calvinklein@fornecedor.com'),
+  ('Vizzano Shoes', 3, 'Vizzano Razão Social', '56789012345680', 567890121, 'Travessa Vizzano, 791', 'vizzano@fornecedor.com'),
+  ('Adidas Distribuidora', 4, 'Adidas Distribuidora Razão Social', '34567890123458', 345678899, 'Praça Adidas, 103', 'adidas@fornecedor.com'),
+  ('Grendene S.A.', 5, 'Grendene Razão Social', '67890123456781', 678901232, 'Alameda Grendene, 204', 'grendene@fornecedor.com'),
+  ('Vizzano Distribuidora', 7, 'Vizzano Distribuidora Razão Social', '98765432109879', 987654318, 'Avenida Vizzano, 459', 'vizzanodistribuidora@fornecedor.com'),
+  ('OrthoPauher Calçados', 8, 'OrthoPauher Razão Social', '56789012345681', 567890120, 'Travessa OrthoPauher, 792', 'orthopauher@fornecedor.com'),
+  ('Bull Terrier Distribuidora', 9, 'Bull Terrier Distribuidora Razão Social', '34567890123459', 345678898, 'Praça Bull Terrier, 104', 'bullterrier@fornecedor.com'),
+  ('Havaianas S.A.', 10, 'Havaianas Razão Social', '67890123456782', 678901231, 'Alameda Havaianas, 205', 'havaianas@fornecedor.com'),
+  ('Democrata Calçados', 11, 'Democrata Razão Social', '12345678901238', 123456785, 'Rua Democrata, 127', 'democrata@fornecedor.com'),
+  ('Grendene Infantil', 12, 'Grendene Infantil Razão Social', '98765432109880', 987654317, 'Avenida Grendene Infantil, 460', 'grendeneinfantil@fornecedor.com'),
+  ('Bottero Distribuidora', 13, 'Bottero Razão Social', '56789012345682', 567890119, 'Travessa Bottero, 793', 'bottero@fornecedor.com'),
+  ('Puma Calçados', 14, 'Puma Razão Social', '34567890123460', 345678897, 'Praça Puma, 105', 'puma@fornecedor.com'),
+  ('Nike Distribuidora de Chinelos', 15, 'Distribuidora Nike Razão Social', '67890123456783', 678901230, 'Alameda Nike Chinelos, 206', 'nikechinelos@fornecedor.com'),
+  ('Molekinha Calçados', 16, 'Molekinha Razão Social', '12345678901239', 123456784, 'Rua Molekinha, 128', 'molekinha@fornecedor.com'),
+  ('Beira Rio Distribuidora', 17, 'Beira Rio Distribuidora Razão Social', '98765432109881', 987654316, 'Avenida Beira Rio, 461', 'beirario@fornecedor.com'),
+  ('Ferracini Calçados', 18, 'Ferracini Razão Social', '56789012345683', 567890118, 'Travessa Ferracini, 794', 'ferracini@fornecedor.com'),
+  ('Vizzano Plataforma', 19, 'Vizzano Plataforma Razão Social', '34567890123461', 345678896, 'Praça Vizzano Plataforma, 106', 'vizzanoplataforma@fornecedor.com'),
+  ('Keds Distribuidora', 20, 'Keds Razão Social', '67890123456784', 678901229, 'Alameda Keds, 207', 'keds@fornecedor.com'),
+  ('Timberland Calçados', 21, 'Timberland Razão Social', '12345678901240', 123456783, 'Rua Timberland, 129', 'timberland@fornecedor.com'),
+  ('Ipanema Distribuidora', 22, 'Ipanema Razão Social', '98765432109882', 987654315, 'Avenida Ipanema, 462', 'ipanema@fornecedor.com'),
+  ('Asics Calçados', 23, 'Asics Razão Social', '56789012345684', 567890117, 'Travessa Asics, 795', 'asics@fornecedor.com'),
+  ('Ferracini Social', 24, 'Ferracini Social Razão Social', '34567890123462', 345678895, 'Praça Ferracini Social, 107', 'ferracinisocial@fornecedor.com'),
+  ('Vizzano Distribuidora de Plataformas', 25, 'Vizzano Plataformas Razão Social', '67890123456785', 678901228, 'Alameda Vizzano Plataformas, 208', 'vizzanoplataformas@fornecedor.com');
+  ('Distribuidora Calçados Express', 1, 'Express Distribuição Ltda', '12345678000100', 1122334455, 'Rua Comercial, 123', 'contato@expresscalcados.com'),
+  ('Fashion Shoes Importadora', 2, 'Fashion Importações S.A.', '98765432000101', 2233445566, 'Avenida da Moda, 456', 'contato@fashionshoes.com'),
+  ('Leather Style Ltda.', 3, 'Leather Style Comércio de Couros', '56789012000102', 3344556677, 'Travessa do Couro, 789', 'contato@leatherstyle.com'),
+  ('Sandals Co.', 4, 'Sandals Company Ltd.', '90123456000103', 4455667788, 'Praça das Sandálias, 101', 'contato@sandalsco.com'),
+  ('Havaianas Distribuidora', 5, 'Havaianas Distribuição Ltda.', '34567890000104', 5566778899, 'Rua das Flip Flops, 202', 'contato@havaianasdistribuidora.com'),
+  ('Design Footwear Export', 6, 'Design Footwear Export Ltd.', '67890123000105', 6677889900, 'Alameda dos Designers, 303', 'contato@designfootwear.com'),
+  ('BootMasters Ltda.', 7, 'BootMasters Indústria de Botas', '01234567000106', 7788990011, 'Avenida das Botas, 404', 'contato@bootmasters.com'),
+  ('Sneakers World Export', 8, 'Sneakers World Export Inc.', '78901234000107', 8899001122, 'Rua dos Sneakers, 505', 'contato@sneakersworld.com'),
+  ('Slipper Land Import', 9, 'Slipper Land Importadora S.A.', '01234567800108', 9900112233, 'Travessa dos Slippers, 606', 'contato@slipperlandimport.com'),
+  ('Heels International', 10, 'Heels International Ltda.', '98765432100109', 1122334455, 'Alameda dos Saltos, 707', 'contato@heelsintl.com'),
+  ('Kicks Distribution', 11, 'Kicks Distribution Ltd.', '34567890000110', 2233445566, 'Praça dos Sneakers, 808', 'contato@kicksdistribution.com'),
+  ('Comfort Walk Co.', 12, 'Comfort Walk Comércio de Calçados', '67890123000111', 3344556677, 'Rua do Conforto, 909', 'contato@comfortwalkco.com'),
+  ('Runners Express', 13, 'Runners Express Ltda.', '01234567000112', 4455667788, 'Avenida dos Runners, 1010', 'contato@runnersexpress.com'),
+  ('Sole Focus Ltd.', 14, 'Sole Focus Exportação Ltda.', '78901234000113', 5566778899, 'Travessa das Solas, 1111', 'contato@solefocus.com'),
+  ('Boots Galore Export', 15, 'Boots Galore Export Inc.', '01234567800114', 6677889900, 'Rua das Botas, 1212', 'contato@bootsgalore.com'),
+  ('Chic Sandals Import', 16, 'Chic Sandals Importadora S.A.', '98765432100115', 7788990011, 'Alameda das Sandálias, 1313', 'contato@chicsandalsimport.com'),
+  ('Street Sneakers Co.', 17, 'Street Sneakers Company Ltd.', '34567890000116', 8899001122, 'Praça dos Street Sneakers, 1414', 'contato@streetsneakersco.com'),
+  ('Flip Flop Land Export', 18, 'Flip Flop Land Export Inc.', '67890123000117', 9900112233, 'Travessa das Flip Flops, 1515', 'contato@flipflopland.com'),
+  ('Luxury Shoes Import', 19, 'Luxury Shoes Importadora S.A.', '01234567000118', 1122334455, 'Rua dos Luxos, 1616', 'contato@luxuryshoesimport.com'),
+  ('Urban Boots Co.', 20, 'Urban Boots Company Ltd.', '98765432100119', 2233445566, 'Avenida das Urban Boots, 1717', 'contato@urbanbootsco.com'),
+  ('Casual Styles Ltda.', 21, 'Casual Styles Indústria de Calçados', '34567890000120', 3344556677, 'Travessa dos Casuais, 1818', 'contato@casualstyles.com'),
+  ('Active Footwear Export', 22, 'Active Footwear Export Inc.', '67890123000121', 4455667788, 'Rua dos Ativos, 1919', 'contato@activefootwear.com'),
+  ('Classic Shoes Distributors', 23, 'Classic Shoes Distributors Ltda.', '01234567000122', 5566778899, 'Praça dos Clássicos, 2020', 'contato@classicshoesdistributors.com'),
+  ('Essential Sneakers Import', 24, 'Essential Sneakers Importadora S.A.', '78901234000123', 6677889900, 'Alameda dos Essenciais, 2121', 'contato@essentialsneakers.com'),
+  ('Trendy Flats Co.', 25, 'Trendy Flats Company Ltd.', '01234567800124', 7788990011, 'Travessa das Tendências, 2222', 'contato@trendyflatsco.com');
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+CREATE TABLE estoque (
+    id_estoque INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    valor_total_estoque DECIMAL(10,2),
+    quantidade_em_estoque INT NOT NULL,
+    quantidade_maxima INT NOT NULL,
+    quantidade_minima INT NOT NULL,
+    preco_unidade DECIMAL(10,2) NOT NULL,
+    data_entrada DATETIME NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    id_produto INT NOT NULL,
+    FOREIGN KEY (id_produto) REFERENCES produto(id_produto)
+);
+
+
+INSERT INTO estoque (valor_total_estoque, quantidade_em_estoque, quantidade_maxima, quantidade_minima, data_entrada, descricao, id_produto, preco_unidade) VALUES
+  (1499.75, 15, 50, 5, '2023-03-01 16:30:00', 'Estoque de tênis esportivos', 1, 99.98),
+  (1124.97, 10, 30, 10, '2023-03-02 17:15:00', 'Estoque de sapatos sociais', 2, 112.50),
+  (899.91, 20, 60, 15, '2023-03-03 18:45:00', 'Estoque de tênis casuais', 3, 45.00),
+  (359.91, 8, 30, 5, '2023-03-04 19:30:00', 'Estoque de chinelos adidas', 4, 44.99),
+  (799.95, 25, 80, 20, '2023-03-05 20:00:00', 'Estoque de sandálias infantis', 5, 32.00),
+  (1299.92, 12, 40, 10, '2023-03-06 16:30:00', 'Estoque de botas femininas', 6, 108.33),
+  (719.92, 18, 50, 15, '2023-03-07 17:15:00', 'Estoque de sandálias de salto alto', 7, 40.00),
+  (959.92, 15, 30, 5, '2023-03-08 18:45:00', 'Estoque de tênis de conforto', 8, 63.99),
+  (1619.88, 10, 20, 5, '2023-03-09 19:30:00', 'Estoque de botas masculinas', 9, 161.99),
+  (1749.75, 20, 60, 15, '2023-03-10 20:00:00', 'Estoque de chinelos femininos', 10, 87.49),
+  (809.92, 15, 40, 10, '2023-03-11 16:30:00', 'Estoque de sapatênis casuais', 11, 53.99),
+  (449.95, 12, 30, 8, '2023-03-12 17:15:00', 'Estoque de sandálias infantis', 12, 37.50),
+  (1169.91, 10, 25, 5, '2023-03-13 18:45:00', 'Estoque de botas femininas', 13, 116.99),
+  (1399.88, 18, 50, 12, '2023-03-14 19:30:00', 'Estoque de tênis esportivos', 14, 77.77),
+  (299.98, 25, 60, 15, '2023-03-15 20:00:00', 'Estoque de chinelos masculinos', 15, 12.00),
+  (599.95, 30, 80, 20, '2023-03-16 16:30:00', 'Estoque de sapatilhas infantis', 16, 20.00),
+  (929.91, 14, 35, 8, '2023-03-17 17:15:00', 'Estoque de botas cano alto', 17, 66.42),
+  (1279.88, 12, 40, 10, '2023-03-18 18:45:00', 'Estoque de tênis casuais', 18, 106.66),
+  (549.96, 20, 50, 15, '2023-03-19 19:30:00', 'Estoque de chinelos femininos', 19, 27.50),
+  (749.94, 25, 60, 18, '2023-03-20 20:00:00', 'Estoque de botas cano curto', 20, 30.00),
+  (659.94, 15, 30, 10, '2023-03-21 16:30:00', 'Estoque de chinelos esportivos', 21, 44.00),
+  (899.91, 18, 40, 12, '2023-03-22 17:15:00', 'Estoque de botas masculinas', 22, 50.00),
+  (1099.89, 22, 50, 15, '2023-03-23 18:45:00', 'Estoque de chinelos femininos', 23, 50.00),
+  (599.94, 30, 80, 20, '2023-03-24 19:30:00', 'Estoque de tênis esportivos', 24, 20.00),
+  (739.92, 14, 35, 8, '2023-03-25 20:00:00', 'Estoque de botas cano curto', 25, 52.85);
+  (1500.00, 100, 150, 50, 15.00, '2023-01-10 09:00:00', 'Estoque Inicial', 1),
+  (2500.00, 80, 120, 40, 30.00, '2023-02-15 11:30:00', 'Novo Modelo Lançado', 2),
+  (1800.00, 120, 180, 60, 15.00, '2023-03-20 13:45:00', 'Promoção de Verão', 3),
+  (3500.00, 50, 100, 25, 70.00, '2023-04-25 08:15:00', 'Edição Limitada', 4),
+  (1200.00, 90, 150, 30, 13.33, '2023-05-30 10:00:00', 'Desconto Especial', 5),
+  (2800.00, 75, 120, 40, 37.33, '2023-06-05 14:20:00', 'Lançamento de Tecnologia', 6),
+  (2000.00, 110, 160, 50, 18.18, '2023-07-10 09:30:00', 'Promoção de Inverno', 7),
+  (4100.00, 60, 110, 20, 68.33, '2023-08-15 12:45:00', 'Edição Especial', 8),
+  (1500.00, 95, 140, 30, 15.79, '2023-09-20 08:00:00', 'Desconto de Aniversário', 9),
+  (3200.00, 85, 130, 40, 37.65, '2023-10-25 10:15:00', 'Lançamento de Coleção', 10),
+  (1800.00, 100, 160, 50, 18.00, '2023-11-30 14:30:00', 'Black Friday', 11),
+  (3000.00, 70, 120, 30, 42.86, '2023-12-05 09:45:00', 'Promoção de Fim de Ano', 12),
+  (2500.00, 105, 150, 40, 23.81, '2024-01-10 11:00:00', 'Liquidação de Estoque', 13),
+  (4000.00, 65, 110, 25, 61.54, '2024-02-15 13:15:00', 'Nova Coleção', 14),
+  (2200.00, 115, 170, 60, 19.13, '2024-03-20 08:30:00', 'Promoção de Primavera', 15),
+  (3600.00, 55, 100, 20, 65.45, '2024-04-25 10:45:00', 'Lançamento Exclusivo', 16),
+  (1900.00, 85, 140, 30, 22.35, '2024-05-30 13:00:00', 'Desconto de Verão', 17),
+  (3300.00, 95, 130, 40, 34.74, '2024-06-05 09:15:00', 'Edição Especial Limitada', 18),
+  (2500.00, 105, 160, 50, 23.81, '2024-07-10 11:30:00', 'Promoção Relâmpago', 19),
+  (4200.00, 50, 110, 20, 84.00, '2024-08-15 13:45:00', 'Nova Tecnologia', 20),
+  (1600.00, 90, 140, 30, 17.78, '2024-09-20 08:00:00', 'Desconto Especial de Aniversário', 21),
+  (2900.00, 75, 120, 40, 38.67, '2024-10-25 10:15:00', 'Lançamento da Temporada', 22),
+  (2100.00, 110, 170, 50, 19.09, '2024-11-30 14:30:00', 'Promoção de Natal', 23),
+  (3800.00, 65, 100, 25, 58.46, '2024-12-05 09:45:00', 'Desconto de Fim de Ano', 24),
+  (2700.00, 120, 150, 40, 22.50, '2025-01-10 11:00:00', 'Liquidação de Estoque de Verão', 25);
+
+  
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+CREATE TABLE funcionario(
+
+	id_funcionario INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR(255) NOT NULL,
+	matricula VARCHAR(255) NOT NULL UNIQUE,
+	senha VARCHAR(255) NOT NULL,
+	cpf VARCHAR(255) NOT NULL UNIQUE,
+	rg INT NOT NULL UNIQUE,
+	cargo VARCHAR(255) NOT NULL,
+	cep VARCHAR(255) NOT NULL,
+	bairro VARCHAR(255),
+	cidade VARCHAR(255) NOT NULL
+	
+);
+
+
+INSERT INTO funcionario (nome, matricula, senha, cpf, rg, cargo, cep, bairro, cidade) VALUES
+  ('Renato Oliveira', '123459', 'senha126', '12345678904', 12345610, 'Vendedor', '12345-681', 'Centro', 'Recife'),
+  ('Mariana Almeida', '789015', 'senha459', '98765432112', 7654324, 'Caixa', '54321-879', 'Barueri', 'São Paulo'),
+  ('Carlos Santos', '345681', 'senha792', '56789012348', 5432112, 'Gerente', '98765-435', 'Vila C', 'Caruaru'),
+  ('Isabela Costa', '901237', 'senha104', '23456789015', 1098768, 'Assistente', '67890-126', 'Tambau', 'João Pessoa'),
+  ('Lucas Rocha', '567893', 'senha205', '67890123459', 8901237, 'Estoquista', '23456-792', 'Centro', 'Limoeiro'),
+  ('Roberta Lima', '123460', 'senha127', '12345678905', 12345611, 'Vendedor', '12345-682', 'Centro', 'Recife'),
+  ('Pedro Souza', '789016', 'senha460', '98765432113', 7654325, 'Caixa', '54321-880', 'Barueri', 'São Paulo'),
+  ('Cristina Pereira', '345682', 'senha793', '56789012349', 5432113, 'Gerente', '98765-436', 'Vila C', 'Caruaru'),
+  ('Marcos Almeida', '901238', 'senha105', '23456789016', 1098769, 'Assistente', '67890-127', 'Tambau', 'João Pessoa'),
+  ('Carla Santos', '567894', 'senha206', '67890123460', 8901238, 'Estoquista', '23456-793', 'Centro', 'Limoeiro'),
+  ('Fábio Lima', '123461', 'senha128', '12345678906', 12345612, 'Vendedor', '12345-683', 'Centro', 'Recife'),
+  ('Amanda Rocha', '789017', 'senha461', '98765432114', 7654326, 'Caixa', '54321-881', 'Barueri', 'São Paulo'),
+  ('Ricardo Oliveira', '345683', 'senha794', '56789012350', 5432114, 'Gerente', '98765-437', 'Vila C', 'Caruaru'),
+  ('Camila Souza', '901239', 'senha106', '23456789017', 1098770, 'Assistente', '67890-128', 'Tambau', 'João Pessoa'),
+  ('Daniel Costa', '567895', 'senha207', '67890123461', 8901239, 'Estoquista', '23456-794', 'Centro', 'Limoeiro'),
+  ('Tatiane Santos', '123462', 'senha129', '12345678907', 12345613, 'Vendedor', '12345-684', 'Centro', 'Recife'),
+  ('Gustavo Lima', '789018', 'senha462', '98765432115', 7654327, 'Caixa', '54321-882', 'Barueri', 'São Paulo'),
+  ('Juliana Almeida', '345684', 'senha795', '56789012351', 5432115, 'Gerente', '98765-438', 'Vila C', 'Caruaru'),
+  ('Rafael Rocha', '901240', 'senha107', '23456789018', 1098771, 'Assistente', '67890-129', 'Tambau', 'João Pessoa'),
+  ('Vanessa Lima', '567896', 'senha208', '67890123462', 8901240, 'Estoquista', '23456-795', 'Centro', 'Limoeiro'),
+  ('Luiz Souza', '123463', 'senha130', '12345678908', 12345614, 'Vendedor', '12345-685', 'Centro', 'Recife'),
+  ('Beatriz Oliveira', '789019', 'senha463', '98765432116', 7654328, 'Caixa', '54321-883', 'Barueri', 'São Paulo'),
+  ('Eduardo Costa', '345685', 'senha796', '56789012352', 5432116, 'Gerente', '98765-439', 'Vila C', 'Caruaru'),
+  ('Fernanda Santos', '901241', 'senha108', '23456789019', 1098772, 'Assistente', '67890-130', 'Tambau', 'João Pessoa'),
+  ('José Lima', '567897', 'senha209', '67890123463', 8901241, 'Estoquista', '23456-796', 'Centro', 'Limoeiro');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

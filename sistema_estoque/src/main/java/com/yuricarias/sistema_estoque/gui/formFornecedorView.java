@@ -35,6 +35,22 @@ public class formFornecedorView extends javax.swing.JFrame {
         tabelaFornecedor.getTableHeader().setBackground(new Color(32, 136, 203));
         tabelaFornecedor.getTableHeader().setForeground(new Color(0, 0, 0));
         tabelaFornecedor.setRowHeight(25);
+        
+        
+        
+         try {
+            
+            btnCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/news.png")));
+            btnAlterarInformacoesFornecedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/refresh.png")));
+            imgLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/logo300.png")));
+            btnLimparCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/eraser.png")));
+            btnCarregarInformacoesFornecedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/reload.png")));
+            btnExcluirFornecedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/trash.png")));
+            btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/return.png")));
+
+        } catch (Exception e) {
+    e.printStackTrace();
+}
     }
 
     /**
@@ -75,7 +91,7 @@ public class formFornecedorView extends javax.swing.JFrame {
         btnCarregarInformacoesFornecedor = new javax.swing.JButton();
         btnExcluirFornecedor = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
+        imgLogo = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -191,7 +207,7 @@ public class formFornecedorView extends javax.swing.JFrame {
         ));
         tabelaFornecedor.setFocusable(false);
         tabelaFornecedor.setRowHeight(25);
-        tabelaFornecedor.setSelectionBackground(new java.awt.Color(0, 204, 51));
+        tabelaFornecedor.setSelectionBackground(new java.awt.Color(102, 102, 255));
         tabelaFornecedor.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(tabelaFornecedor);
 
@@ -217,8 +233,7 @@ public class formFornecedorView extends javax.swing.JFrame {
 
         jPanel2.setLayout(null);
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\logo300.jpeg")); // NOI18N
-        jLabel10.setText("jLabel10");
+        imgLogo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\logo300.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -234,7 +249,7 @@ public class formFornecedorView extends javax.swing.JFrame {
                             .addGap(150, 150, 150)
                             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(18, 18, 18)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -258,8 +273,8 @@ public class formFornecedorView extends javax.swing.JFrame {
                                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(jLabel4)
                                                         .addComponent(txtTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(txtNomeEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                            .addGap(49, 49, 49)
+                                                        .addComponent(txtNomeEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addGap(24, 24, 24)
                                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(cbxIdProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(jLabel1)
@@ -272,8 +287,8 @@ public class formFornecedorView extends javax.swing.JFrame {
                                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(jLabel2)
-                                                        .addComponent(txtRazaoSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGap(55, 55, 55)
+                                                        .addComponent(txtRazaoSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGap(30, 30, 30)
                                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(jLabel3)
                                                         .addComponent(txtCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -297,7 +312,7 @@ public class formFornecedorView extends javax.swing.JFrame {
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -463,8 +478,8 @@ public class formFornecedorView extends javax.swing.JFrame {
     private javax.swing.JButton btnLimparCampos;
     private javax.swing.JButton btnVoltar;
     private javax.swing.JComboBox<String> cbxIdProduto;
+    private javax.swing.JLabel imgLogo;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -13,6 +13,17 @@
     </properties>
     
      <build>
+          <resources>
+        <resource>
+            <directory>src/main/java</directory>
+            <includes>
+               <include>com/yuricarias/sistema_estoque/icons/**/*.properties</include>
+                <include>com/yuricarias/sistema_estoque/icons/**/*.xml</include>
+                <include>com/yuricarias/sistema_estoque/icons/**/*.png</include>
+            </includes>
+        </resource>
+    </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

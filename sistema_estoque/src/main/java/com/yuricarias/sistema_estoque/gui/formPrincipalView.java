@@ -16,6 +16,23 @@ public class formPrincipalView extends javax.swing.JFrame {
     public formPrincipalView() {
         initComponents();
         
+        
+        
+        
+         try {
+            
+            btnTelaCadastroFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/users.png")));
+           btnTelaCadastroProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/features.png")));
+            imgLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/logo300.png")));
+           btnTelaCadastroFornecedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/supplier.png")));
+           btnTelaCadastroEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/stock.png")));
+            btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/yuricarias/sistema_estoque/icons/logout.png")));
+
+        } catch (Exception e) {
+            
+                e.printStackTrace();
+}
+        
     }
 
     /**
@@ -36,7 +53,7 @@ public class formPrincipalView extends javax.swing.JFrame {
         btnTelaCadastroFuncionario = new javax.swing.JButton();
         btnTelaCadastroProdutos = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        imgLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,7 +89,7 @@ public class formPrincipalView extends javax.swing.JFrame {
 
         btnTelaCadastroEstoque.setBackground(new java.awt.Color(51, 0, 102));
         btnTelaCadastroEstoque.setForeground(new java.awt.Color(255, 255, 255));
-        btnTelaCadastroEstoque.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\in-stock.png")); // NOI18N
+        btnTelaCadastroEstoque.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\stock.png")); // NOI18N
         btnTelaCadastroEstoque.setText("Cadastrar e Consultar Estoque");
         btnTelaCadastroEstoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,7 +99,7 @@ public class formPrincipalView extends javax.swing.JFrame {
 
         btnTelaCadastroFuncionario.setBackground(new java.awt.Color(51, 0, 102));
         btnTelaCadastroFuncionario.setForeground(new java.awt.Color(255, 255, 255));
-        btnTelaCadastroFuncionario.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\multiple-users-silhouette.png")); // NOI18N
+        btnTelaCadastroFuncionario.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\users.png")); // NOI18N
         btnTelaCadastroFuncionario.setText("Cadastrar e Consultar Funcionario");
         btnTelaCadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +120,7 @@ public class formPrincipalView extends javax.swing.JFrame {
 
         jPanel2.setLayout(null);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\logo300.jpeg")); // NOI18N
+        imgLogo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Estudo\\Desktop\\sistema_estoque\\src\\main\\java\\com\\yuricarias\\sistema_estoque\\icons\\logo300.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -115,7 +132,7 @@ public class formPrincipalView extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
@@ -147,7 +164,7 @@ public class formPrincipalView extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(16, 16, 16)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnTelaCadastroProdutos)
@@ -237,9 +254,9 @@ public class formPrincipalView extends javax.swing.JFrame {
     private javax.swing.JButton btnTelaCadastroFornecedor;
     private javax.swing.JButton btnTelaCadastroFuncionario;
     private javax.swing.JButton btnTelaCadastroProdutos;
+    private javax.swing.JLabel imgLogo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
