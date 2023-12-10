@@ -1,7 +1,14 @@
-
-Executar os comandos SQL em ordem para criação das tabelas do banco de dados:
+Projeto criado com XAMPP
 
 nome do banco de dados: sistema_estoque
+
+
+Executar os comandos SQL na ordem que está abaixo para criação das tabelas do banco de dados e 
+evitar erros devido as chaves estrangeiras.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
 
 
 
